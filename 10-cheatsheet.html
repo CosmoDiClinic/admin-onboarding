@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-title-en="Cheat Sheet — Cosmo Di Onboarding" data-title-ru="Шпаргалка — Онбординг Cosmo Di">Шпаргалка — Онбординг Cosmo Di</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js"></script>
+<script src="assets/partials.js" defer></script>
+<style>
+  .cheat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    margin-top: var(--space-6);
+  }
+  .cheat-block {
+    background: var(--paper);
+    border: 1px solid var(--bone);
+    border-left: 3px solid var(--burgundy);
+    border-radius: var(--radius-md);
+    padding: var(--space-5) var(--space-6);
+  }
+  .cheat-block-title {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--burgundy);
+    margin-bottom: var(--space-3);
+    display: block;
+  }
+  .cheat-block h3 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    color: var(--ink-deep);
+    margin: 0 0 var(--space-3) 0;
+    line-height: 1.2;
+  }
+  .cheat-block ul { margin: 0; padding-left: var(--space-5); }
+  .cheat-block li { margin-bottom: var(--space-2); line-height: 1.6; font-size: 0.93rem; }
+  .cheat-block li:last-child { margin-bottom: 0; }
+  .cheat-block strong { color: var(--burgundy); }
+  .cheat-block-gold { border-left-color: var(--gold); }
+  .cheat-block-gold .cheat-block-title { color: var(--gold); }
+  .cheat-block-danger { border-left-color: var(--danger); background: #fbf1ef; }
+  .cheat-block-danger .cheat-block-title { color: var(--danger); }
+  .cheat-block-danger strong { color: var(--danger); }
+  .cheat-intro {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--ink-light);
+    max-width: 56ch;
+    margin-bottom: var(--space-6);
+    line-height: 1.55;
+  }
+  .cheat-section-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--burgundy-deep);
+    margin: var(--space-7) 0 var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--bone);
+  }
+  .cheat-section-title:first-of-type { margin-top: var(--space-4); }
+  @media (min-width: 768px) {
+    .cheat-grid-2 { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <section class="hero">
+    <span class="hero-eyebrow">10 — <span class="lang-en">Quick Reference</span><span class="lang-ru">Шпаргалка</span></span>
+    <h1 class="lang-en">In one page</h1>
+    <h1 class="lang-ru">В одной странице</h1>
+    <p class="hero-lead lang-en">Every key rule from the handbook, compressed. If you only have time for one page — this is it.</p>
+    <p class="hero-lead lang-ru">Все ключевые правила из руководства, сжато. Если у тебя есть время только на одну страницу — это она.</p>
+  </section>
+
+  <main>
+
+    <p class="cheat-intro lang-en">Open this in a tab and keep it next to your work. The full explanations live in their respective sections — links are at the bottom.</p>
+    <p class="cheat-intro lang-ru">Открой эту страницу в отдельной вкладке и держи рядом во время работы. Полные объяснения — в соответствующих разделах, ссылки внизу.</p>
+
+    <!-- 1. ROLE -->
+    <h2 class="cheat-section-title lang-en">Your role</h2>
+    <h2 class="cheat-section-title lang-ru">Твоя роль</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block cheat-block-gold">
+        <span class="cheat-block-title lang-en">Main principle</span>
+        <span class="cheat-block-title lang-ru">Главный принцип</span>
+        <h3 class="lang-en">You are the face of the clinic, not "the girl at reception".</h3>
+        <h3 class="lang-ru">Ты — лицо клиники, а не «девочка на ресепшене».</h3>
+        <ul>
+          <li class="lang-en">You speak on behalf of the clinic: <strong>"We", not "I".</strong></li>
+          <li class="lang-ru">Ты говоришь от лица клиники: <strong>«We», не «I».</strong></li>
+          <li class="lang-en">The standard is the same everywhere — WhatsApp, Instagram, reception, phone.</li>
+          <li class="lang-ru">Стандарт одинаковый везде — WhatsApp, Instagram, ресепшен, телефон.</li>
+          <li class="lang-en">Your job is to turn every inquiry into a booking, and to make every client want to return.</li>
+          <li class="lang-ru">Твоя задача — превратить каждое обращение в запись и сделать так, чтобы клиент захотел вернуться.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. LANGUAGE & TONE -->
+    <h2 class="cheat-section-title lang-en">Language & tone</h2>
+    <h2 class="cheat-section-title lang-ru">Язык и тон</h2>
+
+    <div class="cheat-grid cheat-grid-2">
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">Language</span>
+        <span class="cheat-block-title lang-ru">Язык</span>
+        <ul>
+          <li class="lang-en"><strong>Only English</strong> — regardless of what language the client writes in.</li>
+          <li class="lang-ru"><strong>Только английский</strong> — независимо от языка клиента.</li>
+          <li class="lang-en">In a medical context, translation = risk of error.</li>
+          <li class="lang-ru">В медицинском контексте перевод = риск ошибки.</li>
+        </ul>
+      </div>
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">Tone</span>
+        <span class="cheat-block-title lang-ru">Тон</span>
+        <ul>
+          <li class="lang-en"><strong>Warm. Expert. Individual. Calm.</strong></li>
+          <li class="lang-ru"><strong>Тёплый. Экспертный. Индивидуальный. Спокойный.</strong></li>
+          <li class="lang-en">Not a one-liner. Not a wall of text. The client must feel attended to.</li>
+          <li class="lang-ru">Не односложно. Не полотном. Клиент должен чувствовать внимание.</li>
+          <li class="lang-en">No robotic answers. Templates are starting points, not final replies.</li>
+          <li class="lang-ru">Никаких robotic-ответов. Шаблоны — стартовая точка, не финал.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. BEFORE YOU REPLY -->
+    <h2 class="cheat-section-title lang-en">Before you reply</h2>
+    <h2 class="cheat-section-title lang-ru">Перед каждым ответом</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block">
+        <ul>
+          <li class="lang-en"><strong>Read the chat history</strong> — minimum the last week, longer if needed.</li>
+          <li class="lang-ru"><strong>Прочитай историю чата</strong> — минимум за последнюю неделю, при необходимости больше.</li>
+          <li class="lang-en"><strong>Open the client card in Alteg.io</strong> — labels, comments, visit history.</li>
+          <li class="lang-ru"><strong>Открой карточку клиента в Alteg.io</strong> — лейблы, комментарии, история визитов.</li>
+          <li class="lang-en">Only after that — reply. The client should never have to repeat themselves.</li>
+          <li class="lang-ru">Только после этого — отвечай. Клиент не должен повторять то, что уже сказал.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. MESSAGE RULES -->
+    <h2 class="cheat-section-title lang-en">Message rules</h2>
+    <h2 class="cheat-section-title lang-ru">Правила сообщения</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block cheat-block-gold">
+        <span class="cheat-block-title lang-en">The single most important rule</span>
+        <span class="cheat-block-title lang-ru">Самое важное правило</span>
+        <h3 class="lang-en">Every message ends with a question.</h3>
+        <h3 class="lang-ru">Каждое сообщение заканчивается вопросом.</h3>
+        <ul>
+          <li class="lang-en">The only exception is the closing message, after the booking is confirmed.</li>
+          <li class="lang-ru">Единственное исключение — закрывающее сообщение, когда запись уже подтверждена.</li>
+          <li class="lang-en">Without a question, the conversation does not move forward.</li>
+          <li class="lang-ru">Без вопроса диалог не двигается.</li>
+        </ul>
+      </div>
+
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">But the question must work</span>
+        <span class="cheat-block-title lang-ru">Но вопрос должен работать</span>
+        <ul>
+          <li class="lang-en">A working question: helps orient the client, moves to booking, or fills a clear information need.</li>
+          <li class="lang-ru">Работающий вопрос: помогает сориентировать клиента, ведёт к записи или закрывает конкретную потребность в информации.</li>
+          <li class="lang-en">Skip: medical questions (doctor / nurse), "for conversation", anything already in the chat history.</li>
+          <li class="lang-ru">Не задаём: медицинские (это врач / медсестра), «для разговора», то, что уже есть в истории чата.</li>
+        </ul>
+      </div>
+
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">Answer first, lead later</span>
+        <span class="cheat-block-title lang-ru">Сначала ответ, потом ведение</span>
+        <ul>
+          <li class="lang-en">If the client asks a direct question — answer it first. Then move to the next step.</li>
+          <li class="lang-ru">Если клиент задал прямой вопрос — сначала отвечай на него. Только потом веди дальше.</li>
+          <li class="lang-en"><strong>Price is not a secret.</strong> Quote the starting price (check Alteg.io), then explain the consultation.</li>
+          <li class="lang-ru"><strong>Прайс — не секрет.</strong> Назови стартовую цену (сверь с Alteg.io), потом объясни консультацию.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. RESPONSE TIME -->
+    <h2 class="cheat-section-title lang-en">Response time</h2>
+    <h2 class="cheat-section-title lang-ru">Время ответа</h2>
+
+    <div class="cheat-grid cheat-grid-2">
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">Working hours</span>
+        <span class="cheat-block-title lang-ru">Рабочие часы</span>
+        <h3>10:00 — 18:00</h3>
+        <ul>
+          <li class="lang-en">Up to <strong>15 minutes</strong> for any incoming message.</li>
+          <li class="lang-ru">До <strong>15 минут</strong> на любое входящее.</li>
+          <li class="lang-en">Never write "I'll get back to you" without a concrete timeframe.</li>
+          <li class="lang-ru">Никогда «I'll get back» без конкретного срока.</li>
+        </ul>
+      </div>
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">Outside working hours</span>
+        <span class="cheat-block-title lang-ru">Вне рабочих часов</span>
+        <ul>
+          <li class="lang-en">Up to <strong>30 minutes</strong> after the clinic opens the next working day.</li>
+          <li class="lang-ru">До <strong>30 минут</strong> после открытия в следующий рабочий день.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. CLIENT FIRST -->
+    <h2 class="cheat-section-title lang-en">Client first — always</h2>
+    <h2 class="cheat-section-title lang-ru">Клиент на первом месте — всегда</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block cheat-block-gold">
+        <span class="cheat-block-title lang-en">When a client is in front of you</span>
+        <span class="cheat-block-title lang-ru">Когда клиент перед тобой</span>
+        <ul>
+          <li class="lang-en"><strong>Couriers wait outside</strong> — we do not let them into the clinic while clients are at reception.</li>
+          <li class="lang-ru"><strong>Курьеры ждут снаружи</strong> — не запускаем в клинику, пока на ресепшене есть клиент.</li>
+          <li class="lang-en">Staff with a question — wait. Phone — let it ring. Chat — reply after. The client gets full attention.</li>
+          <li class="lang-ru">Сотрудник с вопросом — ждёт. Телефон — звонит. Чат — отвечаешь после. Клиенту — всё внимание.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7. IN THE CLINIC -->
+    <h2 class="cheat-section-title lang-en">In the clinic</h2>
+    <h2 class="cheat-section-title lang-ru">В клинике</h2>
+
+    <div class="cheat-grid cheat-grid-2">
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">Meeting</span>
+        <span class="cheat-block-title lang-ru">Встреча</span>
+        <ul>
+          <li class="lang-en">Stand up, greet by name, smile, eye contact, lead to waiting area.</li>
+          <li class="lang-ru">Встать, по имени, улыбка, eye contact, проводить к зоне ожидания.</li>
+          <li class="lang-en">On time / early — water, tea, or coffee. Late — water only.</li>
+          <li class="lang-ru">Вовремя / раньше — вода, чай, кофе. Опоздал — только вода.</li>
+          <li class="lang-en">Inform the doctor / therapist of arrival.</li>
+          <li class="lang-ru">Сообщи врачу или тераписту о приходе.</li>
+        </ul>
+      </div>
+
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">When the client leaves</span>
+        <span class="cheat-block-title lang-ru">При выходе клиента</span>
+        <ul>
+          <li class="lang-en">Ask how the visit went.</li>
+          <li class="lang-ru">Спроси, как прошёл визит.</li>
+          <li class="lang-en"><strong>Always book the next visit</strong> — 90% KPI.</li>
+          <li class="lang-ru"><strong>Обязательно запиши на следующий</strong> — KPI 90%.</li>
+          <li class="lang-en"><strong>Ask for a Google review + give a small gift</strong> (samples).</li>
+          <li class="lang-ru"><strong>Попроси Google-отзыв + дай подарок</strong> (пробники).</li>
+        </ul>
+      </div>
+
+      <div class="cheat-block cheat-block-danger">
+        <span class="cheat-block-title lang-en">Client is late</span>
+        <span class="cheat-block-title lang-ru">Клиент опаздывает</span>
+        <ul>
+          <li class="lang-en"><strong>10+ minutes late → call the client.</strong> Ask if everything's okay, when they're arriving.</li>
+          <li class="lang-ru"><strong>10+ минут → звонок клиенту.</strong> Спроси, всё ли в порядке, когда планирует приехать.</li>
+          <li class="lang-en">30+ minutes — receive if specialist is free, or reschedule.</li>
+          <li class="lang-ru">30+ минут — принимаем если врач свободен, или переносим.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8. PRE-CONFIRMATION -->
+    <h2 class="cheat-section-title lang-en">Pre-confirmation — non-negotiable</h2>
+    <h2 class="cheat-section-title lang-ru">Pre-confirmation — обязательно</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block cheat-block-danger">
+        <span class="cheat-block-title lang-en">Daily protocol</span>
+        <span class="cheat-block-title lang-ru">Ежедневный протокол</span>
+        <ul>
+          <li class="lang-en"><strong>Morning</strong> — send pre-confirmation for all next-day bookings.</li>
+          <li class="lang-ru"><strong>Утром</strong> — pre-confirmation на завтра всем клиентам.</li>
+          <li class="lang-en"><strong>By 15:00</strong> — second message to anyone who didn't reply.</li>
+          <li class="lang-ru"><strong>До 15:00</strong> — повторное сообщение неответившим.</li>
+          <li class="lang-en"><strong>By 17:00</strong> — phone call if still no reply.</li>
+          <li class="lang-ru"><strong>До 17:00</strong> — звонок, если так и не ответили.</li>
+          <li class="lang-en"><strong>Before closing</strong> — not a single unconfirmed booking. Mark unanswered as <em>tentative</em>.</li>
+          <li class="lang-ru"><strong>Перед закрытием</strong> — ни одной неподтверждённой записи. Неотвеченные — <em>tentative</em>.</li>
+          <li class="lang-en"><strong>Next morning by 12:00</strong> — close all tentative (confirm or cancel).</li>
+          <li class="lang-ru"><strong>Утром до 12:00</strong> — закрыть все tentative (приходит / отменяем).</li>
+          <li class="lang-en"><strong>Day of the visit, morning</strong> — short confirmation message.</li>
+          <li class="lang-ru"><strong>В день визита, утром</strong> — короткое confirmation сообщение.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9. CANCELLATION -->
+    <h2 class="cheat-section-title lang-en">Cancellation</h2>
+    <h2 class="cheat-section-title lang-ru">Отмена</h2>
+
+    <div class="cheat-grid cheat-grid-2">
+      <div class="cheat-block">
+        <span class="cheat-block-title lang-en">More than 24h before</span>
+        <span class="cheat-block-title lang-ru">Более чем за 24 часа</span>
+        <ul>
+          <li class="lang-en">Standard reschedule. Deposit transfers automatically.</li>
+          <li class="lang-ru">Стандартный перенос. Депозит сохраняется автоматически.</li>
+        </ul>
+      </div>
+      <div class="cheat-block cheat-block-danger">
+        <span class="cheat-block-title lang-en">Within 24h</span>
+        <span class="cheat-block-title lang-ru">Менее чем за 24 часа</span>
+        <ul>
+          <li class="lang-en">Deposit is forfeited by policy.</li>
+          <li class="lang-ru">Депозит сгорает по политике.</li>
+          <li class="lang-en"><strong>First-time exception:</strong> keep the deposit for 3 months.</li>
+          <li class="lang-ru"><strong>Исключение на первый раз:</strong> сохраняем депозит на 3 месяца.</li>
+          <li class="lang-en">Always immediately offer a new date.</li>
+          <li class="lang-ru">Всегда сразу предлагаем новую дату.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 10. SLEEPING BASE -->
+    <h2 class="cheat-section-title lang-en">Sleeping base</h2>
+    <h2 class="cheat-section-title lang-ru">Спящая база</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block">
+        <ul>
+          <li class="lang-en"><strong>10 messages per day</strong> from clients 60+, 90+, 180+ days inactive.</li>
+          <li class="lang-ru"><strong>10 сообщений в день</strong> клиентам 60+, 90+, 180+ дней без визита.</li>
+          <li class="lang-en"><strong>Not offers — questions.</strong> "How is your skin doing?" Not "we have a discount".</li>
+          <li class="lang-ru"><strong>Не офферы — вопросы.</strong> «How is your skin doing?» — не «у нас скидка».</li>
+          <li class="lang-en">Every reply — log in the client card. Reasons for leaving become our objections database.</li>
+          <li class="lang-ru">Каждый ответ — в карточку клиента. Причины ухода — наша база возражений.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 11. WHAT YOU DON'T DO -->
+    <h2 class="cheat-section-title lang-en">What you do NOT do</h2>
+    <h2 class="cheat-section-title lang-ru">Что ты НЕ делаешь</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block cheat-block-danger">
+        <ul>
+          <li class="lang-en"><strong>You do not prescribe procedures</strong> — doctor's job.</li>
+          <li class="lang-ru"><strong>Не назначаешь процедуры</strong> — это работа врача.</li>
+          <li class="lang-en"><strong>You do not explain aftercare</strong> — the nurse does.</li>
+          <li class="lang-ru"><strong>Не объясняешь aftercare</strong> — это медсестра.</li>
+          <li class="lang-en"><strong>You do not interpret skin reactions</strong> — redirect to nurse or doctor.</li>
+          <li class="lang-ru"><strong>Не интерпретируешь реакции кожи</strong> — переадресуй к медсестре или врачу.</li>
+          <li class="lang-en"><strong>You do not propose discounts</strong> — only management does.</li>
+          <li class="lang-ru"><strong>Не предлагаешь скидки</strong> — только руководство.</li>
+          <li class="lang-en"><strong>You do not answer medical questions</strong> — pass to doctor or nurse.</li>
+          <li class="lang-ru"><strong>Не отвечаешь на медицинские вопросы</strong> — врач или медсестра.</li>
+          <li class="lang-en"><strong>You do not make financial decisions</strong> — through management.</li>
+          <li class="lang-ru"><strong>Не принимаешь финансовых решений</strong> — через руководство.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 12. CONFIDENTIALITY -->
+    <h2 class="cheat-section-title lang-en">Confidentiality</h2>
+    <h2 class="cheat-section-title lang-ru">Конфиденциальность</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block">
+        <ul>
+          <li class="lang-en">We communicate <strong>only with the client themselves.</strong></li>
+          <li class="lang-ru">Общаемся <strong>только с самим клиентом.</strong></li>
+          <li class="lang-en">Not with relatives, employers, friends, journalists — no matter how convincing they sound.</li>
+          <li class="lang-ru">Не с родственниками, работодателями, друзьями, журналистами — как бы убедительно ни звучали.</li>
+          <li class="lang-en">Standard reply: <em>"I'm not able to share any information about our clients — this is part of our confidentiality policy."</em></li>
+          <li class="lang-ru">Стандартный ответ: <em>«I'm not able to share any information about our clients — this is part of our confidentiality policy.»</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13. ESCALATION -->
+    <h2 class="cheat-section-title lang-en">Escalation</h2>
+    <h2 class="cheat-section-title lang-ru">Эскалация</h2>
+
+    <div class="cheat-grid">
+      <div class="cheat-block">
+        <ul>
+          <li class="lang-en"><strong>Medical (skin reaction, pain)</strong> → Nurse first, then Diana</li>
+          <li class="lang-ru"><strong>Медицинская (реакция, боль)</strong> → Сначала медсестра, потом Диана</li>
+          <li class="lang-en"><strong>Service complaint</strong> → Tatiana or Diana</li>
+          <li class="lang-ru"><strong>Жалоба на сервис</strong> → Татьяна или Диана</li>
+          <li class="lang-en"><strong>Discounts, financial exceptions</strong> → Management</li>
+          <li class="lang-ru"><strong>Скидки, финансовые исключения</strong> → Руководство</li>
+          <li class="lang-en"><strong>DHA inspection</strong> → <strong>Ahmed Al Baluki, +971 54 276 9773</strong> + Diana, immediately</li>
+          <li class="lang-ru"><strong>DHA inspection</strong> → <strong>Ahmed Al Baluki, +971 54 276 9773</strong> + Диана, немедленно</li>
+          <li class="lang-en"><strong>Confidentiality breach</strong> → Tatiana or Diana, immediately</li>
+          <li class="lang-ru"><strong>Нарушение конфиденциальности</strong> → Татьяна или Диана, немедленно</li>
+          <li class="lang-en"><strong>Technical problems</strong> → service support yourself, then Diana if unresolved</li>
+          <li class="lang-ru"><strong>Технические проблемы</strong> → сначала поддержка сервиса, потом Диана если не решили</li>
+          <li class="lang-en"><strong>VIP / Diana Only labels</strong> → only with Diana's approval</li>
+          <li class="lang-ru"><strong>Лейблы VIP / Diana Only</strong> → только с одобрения Дианы</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 14. KPI -->
+    <h2 class="cheat-section-title lang-en">KPI</h2>
+    <h2 class="cheat-section-title lang-ru">KPI</h2>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-num">90%</span>
+        <span class="kpi-label lang-en">Next-visit booking</span>
+        <span class="kpi-label lang-ru">Запись на следующий</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-num">≤5%</span>
+        <span class="kpi-label lang-en">Cancellations</span>
+        <span class="kpi-label lang-ru">Отмены</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-num">30%</span>
+        <span class="kpi-label lang-en">Google reviews</span>
+        <span class="kpi-label lang-ru">Google-отзывы</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-num">10/day</span>
+        <span class="kpi-label lang-en">Sleeping base touches</span>
+        <span class="kpi-label lang-ru">Спящая база</span>
+      </div>
+    </div>
+
+    <hr style="margin-top: var(--space-9);">
+
+    <p style="text-align: center; font-style: italic; color: var(--ink-light); font-family: var(--font-display); font-size: 1.05rem; margin-top: var(--space-6);">
+      <span class="lang-en">Full explanations: <a href="03-standards.html">Section 3</a> · <a href="04-logic.html">Section 4</a> · <a href="07-day.html">Section 7</a> · <a href="08-kpi.html">Section 8</a></span>
+      <span class="lang-ru">Полные объяснения: <a href="03-standards.html">раздел 3</a> · <a href="04-logic.html">раздел 4</a> · <a href="07-day.html">раздел 7</a> · <a href="08-kpi.html">раздел 8</a></span>
+    </p>
+
+  </main>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  injectHeader('10', 'Cheat Sheet', 'Шпаргалка');
+  injectFooterNav(
+    '09-tools.html', 'Tools & escalation', 'Инструменты и эскалация',
+    null, null, null
+  );
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-title-en="Resources — Cosmo Di Onboarding" data-title-ru="Ресурсы — Онбординг Cosmo Di">Ресурсы — Онбординг Cosmo Di</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js"></script>
+<script src="assets/partials.js" defer></script>
+<style>
+  .resource {
+    background: var(--paper);
+    border: 1px solid var(--bone);
+    border-left: 3px solid var(--burgundy);
+    border-radius: var(--radius-md);
+    padding: var(--space-5) var(--space-6);
+    margin: var(--space-4) 0;
+  }
+  .resource-type {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    background: var(--burgundy-deep);
+    padding: 0.2em 0.7em;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-bottom: var(--space-3);
+  }
+  .resource-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--ink-deep);
+    margin-bottom: var(--space-3);
+    line-height: 1.2;
+  }
+  .resource-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-light);
+    margin-bottom: var(--space-3);
+  }
+  .resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--burgundy);
+    background: transparent;
+    border: 1px solid var(--burgundy);
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    transition: all var(--t-fast);
+    text-decoration: none;
+  }
+  .resource-link:hover {
+    background: var(--burgundy);
+    color: var(--cream);
+  }
+  .resource-link::after { content: '↗'; font-size: 0.9rem; letter-spacing: 0; }
+  .resource-link-secondary {
+    display: inline-block;
+    margin-left: var(--space-3);
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    font-style: italic;
+    border: none;
+  }
+  .resource-section-title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--burgundy-deep);
+    margin: var(--space-7) 0 var(--space-3);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--bone);
+  }
+  .resource-section-title:first-of-type { margin-top: var(--space-4); }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <section class="hero">
+    <span class="hero-eyebrow">11 — <span class="lang-en">Resources</span><span class="lang-ru">Ресурсы</span></span>
+    <h1 class="lang-en">All the live files</h1>
+    <h1 class="lang-ru">Все рабочие файлы</h1>
+    <p class="hero-lead lang-en">Every live document you work with daily — in one place. Bookmark this page.</p>
+    <p class="hero-lead lang-ru">Все живые документы, с которыми ты работаешь каждый день — в одном месте. Сохрани в закладки.</p>
+  </section>
+
+  <main>
+
+    <!-- DAILY WORK -->
+    <h2 class="resource-section-title lang-en">Daily work</h2>
+    <h2 class="resource-section-title lang-ru">Ежедневная работа</h2>
+
+    <div class="resource">
+      <span class="resource-type">Google Sheets</span>
+      <h3 class="resource-title lang-en">Daily Admin Tasks tracker</h3>
+      <h3 class="resource-title lang-ru">Daily Admin Tasks — трекер</h3>
+      <p class="resource-desc lang-en">Your main working file. The current week's task tab, the Weekly KPI Tracker, and the archive of past weeks. Open it every morning, fill it through the day, close the week on Saturday.</p>
+      <p class="resource-desc lang-ru">Главный рабочий файл. Вкладка с задачами текущей недели, Weekly KPI Tracker и архив прошлых недель. Открываешь каждое утро, заполняешь в течение дня, закрываешь неделю в субботу.</p>
+      <a class="resource-link" href="https://docs.google.com/spreadsheets/d/1JrpoavJigrfJGAUTGkES03_93woobunJWXqj6lfhz8g/edit?gid=1591056475" target="_blank" rel="noopener">
+        <span class="lang-en">Open tracker</span><span class="lang-ru">Открыть трекер</span>
+      </a>
+      <a class="resource-link-secondary" href="07-day.html">
+        <span class="lang-en">→ How to use it (Section 7)</span><span class="lang-ru">→ Как использовать (раздел 7)</span>
+      </a>
+    </div>
+
+    <!-- POLICIES -->
+    <h2 class="resource-section-title lang-en">Policies & SOPs</h2>
+    <h2 class="resource-section-title lang-ru">Политики и СОПы</h2>
+
+    <div class="resource">
+      <span class="resource-type">Google Docs</span>
+      <h3 class="resource-title lang-en">Reservation & Deposit SOP</h3>
+      <h3 class="resource-title lang-ru">СОП по бронированиям и депозитам</h3>
+      <p class="resource-desc lang-en">The full policy — 200 AED deposit, 24-hour cancellation rule, payment window, first-time exception. Refer here whenever a client questions the policy or you need to verify a rule.</p>
+      <p class="resource-desc lang-ru">Полная политика — депозит 200 AED, правило 24 часов на отмену, окно оплаты, исключение на первый раз. Сверяйся с ней, когда клиент задаёт вопрос про политику или ты сомневаешься в правиле.</p>
+      <a class="resource-link" href="https://docs.google.com/document/d/1vy0kTI86nyU63iI8cFpPPvfYVk4bVXqgVky8FDi09Ao/edit" target="_blank" rel="noopener">
+        <span class="lang-en">Open SOP</span><span class="lang-ru">Открыть СОП</span>
+      </a>
+      <a class="resource-link-secondary" href="06-processes.html">
+        <span class="lang-en">→ Summary in Section 6</span><span class="lang-ru">→ Краткая версия в разделе 6</span>
+      </a>
+    </div>
+
+    <!-- TRACKERS -->
+    <h2 class="resource-section-title lang-en">Trackers</h2>
+    <h2 class="resource-section-title lang-ru">Трекеры</h2>
+
+    <div class="resource">
+      <span class="resource-type">Google Sheets</span>
+      <h3 class="resource-title lang-en">Cancellations & Reschedules tracker</h3>
+      <h3 class="resource-title lang-ru">Трекер отмен и переносов</h3>
+      <p class="resource-desc lang-en">Log every cancellation and reschedule: date, client, reason, whether the deposit was forfeited or kept (3-month courtesy), new booking date if rescheduled. Review every Monday as part of the SOP weekly task.</p>
+      <p class="resource-desc lang-ru">Журнал всех отмен и переносов: дата, клиент, причина, сгорел ли депозит или сохранён (исключение на 3 месяца), новая дата если перенос. Сверка каждый понедельник в рамках еженедельной задачи по СОП.</p>
+      <a class="resource-link" href="https://docs.google.com/spreadsheets/d/1cVaua4TL1i6pNJX9e32_lNsFAvOJuHP5JQLRsyryYbU/edit?gid=16415534" target="_blank" rel="noopener">
+        <span class="lang-en">Open tracker</span><span class="lang-ru">Открыть трекер</span>
+      </a>
+      <a class="resource-link-secondary" href="04-logic.html">
+        <span class="lang-en">→ Cancellation logic (Section 4)</span><span class="lang-ru">→ Логика отмен (раздел 4)</span>
+      </a>
+    </div>
+
+    <hr style="margin-top: var(--space-8);">
+
+    <p style="font-style: italic; color: var(--ink-light); margin-top: var(--space-5);">
+      <span class="lang-en">If a link breaks or you don't have access to a document — message Tatiana immediately. Don't try to work around missing access.</span>
+      <span class="lang-ru">Если ссылка не работает или нет доступа — сразу напиши Татьяне. Не пытайся обойти отсутствие доступа.</span>
+    </p>
+
+  </main>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  injectHeader('11', 'Resources', 'Ресурсы');
+  injectFooterNav(
+    '10-cheatsheet.html', 'Cheat sheet', 'Шпаргалка',
+    null, null, null
+  );
+});
+</script>
+
+</body>
+</html>

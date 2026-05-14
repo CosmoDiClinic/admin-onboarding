@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-title-en="Templates — Cosmo Di Onboarding" data-title-ru="Шаблоны — Онбординг Cosmo Di">Шаблоны — Онбординг Cosmo Di</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js" defer></script>
+<script src="assets/partials.js" defer></script>
+<style>
+  .tpl {
+    background: #fff;
+    border: 1px solid var(--bone);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    margin: var(--space-4) 0;
+    position: relative;
+  }
+  .tpl-code {
+    background: var(--burgundy-50);
+    border-left: 3px solid var(--burgundy-500);
+    padding: var(--space-4) var(--space-5);
+    margin: var(--space-3) 0 var(--space-2);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--ink);
+    white-space: pre-wrap;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  .tpl-id {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--burgundy-600);
+    letter-spacing: 0.12em;
+    margin-right: var(--space-3);
+    background: var(--burgundy-100);
+    padding: 0.15em 0.6em;
+    border-radius: var(--radius-sm);
+  }
+  .tpl-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--ink-deep);
+    margin-bottom: var(--space-2);
+    display: inline;
+  }
+  .tpl-note {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    font-style: italic;
+    margin-top: var(--space-2);
+  }
+  .tpl-var {
+    background: rgba(110, 28, 58, 0.08);
+    padding: 0 0.3em;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    color: var(--burgundy-700);
+  }
+  .group-intro {
+    font-style: italic;
+    color: var(--ink-light);
+    margin-bottom: var(--space-5);
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <section class="hero">
+    <span class="hero-eyebrow">05 — <span class="lang-en">Templates</span><span class="lang-ru">Шаблоны</span></span>
+    <h1><span class="lang-en">Message templates</span><span class="lang-ru">Шаблоны сообщений</span></h1>
+    <p class="hero-lead">
+      <span class="lang-en">Ready-to-edit English templates for every situation. Copy, edit for the specific client, send.</span>
+      <span class="lang-ru">Готовые английские шаблоны для редактирования под клиента. Копировать, отредактировать под конкретного человека, отправить.</span>
+    </p>
+  </section>
+
+  <main>
+
+    <div class="callout">
+      <div class="lang-en">
+        <p><strong>How to use these templates:</strong></p>
+        <ul style="margin-bottom: 0;">
+          <li>Always edit the template for the specific client and their specific question — never send blindly</li>
+          <li>Add the client's name where you see <span class="tpl-var">[Name]</span></li>
+          <li>Fill in concrete details where you see square brackets <span class="tpl-var">[like this]</span></li>
+          <li>If the template doesn't fully answer the client's question — extend it, don't force-fit</li>
+          <li>Match the tone to what the client wrote — if they wrote one short sentence, your reply doesn't need to be a wall of text</li>
+        </ul>
+      </div>
+      <div class="lang-ru">
+        <p><strong>Как пользоваться шаблонами:</strong></p>
+        <ul style="margin-bottom: 0;">
+          <li>Всегда редактируй шаблон под конкретного клиента и его конкретный вопрос — никогда не отправляй вслепую</li>
+          <li>Добавь имя клиента там, где видишь <span class="tpl-var">[Name]</span></li>
+          <li>Заполни конкретные детали там, где квадратные скобки <span class="tpl-var">[вот так]</span></li>
+          <li>Если шаблон не отвечает полностью на вопрос клиента — дописывай, не пытайся впихнуть как есть</li>
+          <li>Подстраивай объём под стиль клиента — если он написал одно короткое сообщение, не нужно отвечать полотном</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>A. <span class="lang-en">Incoming inquiries</span><span class="lang-ru">Входящие запросы</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">First contact, new clients, broad questions about treatments and prices.</span>
+      <span class="lang-ru">Первый контакт, новые клиенты, широкие вопросы о процедурах и ценах.</span>
+    </p>
+
+    <div class="tpl">
+      <span class="tpl-id">A1</span>
+      <span class="tpl-title"><span class="lang-en">Clarifying a broad inquiry</span><span class="lang-ru">Уточнение по широкому запросу</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Use when the client asks "what do you have" / "tell me about your services" without specifying.</span>
+        <span class="lang-ru">Используется, когда клиент пишет «что у вас есть» / «расскажите про услуги» без конкретики.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], thank you for reaching out to Cosmo Di! To help guide you to the right option — what are you mainly looking to address? For example: wrinkle relaxation (Botox), lip or face contouring with fillers, skin quality and hydration (biorevitalization), facial treatments, peels, body sculpting, or something else?
+
+Once I know your focus, I can share the relevant options and pricing, and we can find the right approach for you.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">A2</span>
+      <span class="tpl-title"><span class="lang-en">Replying with a price for a specific procedure</span><span class="lang-ru">Ответ с ценой на конкретную процедуру</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Client knows what they want. Open Alteg.io for the exact price before sending.</span>
+        <span class="lang-ru">Клиент знает, что хочет. Открой Alteg.io для точной цены перед отправкой.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], happy to share. Our [procedure name] with Dr. Diana / our aesthetician starts from AED [price]. The procedure takes around [duration] and the result typically lasts [duration of effect].
+
+Would you like me to find a slot for you this week? Mornings, afternoons, or evenings work better for you?</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">A3</span>
+      <span class="tpl-title"><span class="lang-en">Sending full price list (when client insists)</span><span class="lang-ru">Отправка полного прайса (когда клиент настаивает)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">When the client wants to see everything before deciding. Never just dump a price list without context.</span>
+        <span class="lang-ru">Когда клиент хочет увидеть всё прежде чем решать. Никогда не вываливай прайс без контекста.</span>
+      </p>
+      <div class="tpl-code">Of course, [Name] — please find our pricing for [category] below.
+
+[paste relevant pricing]
+
+Please note: the final choice of product and protocol is always made by Dr. Diana during the consultation, based on your skin's specific condition and the result you'd like to achieve. This is what allows us to deliver natural, lasting results rather than a generic approach.
+
+Would you like me to book you in for a consultation so Dr. Diana can recommend the optimal plan for you?</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">A4</span>
+      <span class="tpl-title"><span class="lang-en">Booking confirmation with deposit link</span><span class="lang-ru">Подтверждение записи со ссылкой на депозит</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">After the client agreed to a slot. Send right after reserving the booking in Alteg.io.</span>
+        <span class="lang-ru">После того как клиент согласился на слот. Отправляй сразу после резервирования в Alteg.io.</span>
+      </p>
+      <div class="tpl-code">Wonderful, [Name] — I have reserved [day, date] at [time] with Dr. Diana / our aesthetician for your [procedure type].
+
+To confirm the booking, please complete a refundable deposit of AED 200 via the link below. The deposit secures your slot and will be applied to your procedure cost on the day:
+
+[Stripe link]
+
+Just a note on our policy: the deposit is fully refundable for changes made more than 24 hours before the visit. For changes within 24 hours, the deposit is non-refundable.
+
+Looking forward to seeing you!</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">A5</span>
+      <span class="tpl-title"><span class="lang-en">Booking a consultation</span><span class="lang-ru">Запись на консультацию</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">For requests like "I have acne", "I want to look younger", "I don't know what I need".</span>
+        <span class="lang-ru">Для запросов вроде «у меня акне», «я хочу омолодиться», «не знаю что мне нужно».</span>
+      </p>
+      <div class="tpl-code">Hi [Name], [concern] is exactly the kind of thing Dr. Diana works with regularly. The right first step here is a [Acne / VISIA / Procedure] Consultation — she'll examine your skin in detail, identify the underlying cause, and put together a personalised plan combining the right procedures and home care for your specific case.
+
+The consultation takes 30 minutes and is AED [price].
+
+When works best for you — morning, afternoon, or evening? I'd be happy to find a couple of options.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">A6</span>
+      <span class="tpl-title"><span class="lang-en">Offering specific slots</span><span class="lang-ru">Предложение конкретных слотов</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">After the client tells you their preferred part of the day. Offer two specific slots optimal for Booking Discipline.</span>
+        <span class="lang-ru">После того как клиент сказал предпочитаемую часть дня. Предложи два конкретных слота, оптимальных для Booking Discipline.</span>
+      </p>
+      <div class="tpl-code">Perfect, [Name]. I have [day] at [time] or [day] at [time] available. Which one works better for you?</div>
+    </div>
+
+    <h2>B. <span class="lang-en">Pre-confirmation and confirmation</span><span class="lang-ru">Pre-confirmation и confirmation</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">Day-before pre-confirmation, day-of confirmation, follow-up to non-responders.</span>
+      <span class="lang-ru">Pre-confirmation за день, confirmation в день визита, follow-up неответивших.</span>
+    </p>
+
+    <div class="tpl">
+      <span class="tpl-id">B1</span>
+      <span class="tpl-title"><span class="lang-en">Pre-confirmation (day before)</span><span class="lang-ru">Pre-confirmation (за день)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Sent in the morning the day before the visit. Always include exact time and specialist.</span>
+        <span class="lang-ru">Отправляется утром за день до визита. Всегда указывай точное время и специалиста.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], a friendly reminder that we have you booked tomorrow, [day, date] at [time], for your [procedure] with Dr. Diana / our aesthetician.
+
+Could you please confirm that you'll be coming? Just a quick "yes" or "see you tomorrow" works.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">B2</span>
+      <span class="tpl-title"><span class="lang-en">Confirmation (day of)</span><span class="lang-ru">Confirmation (в день визита)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Short message the morning of the visit. Final check.</span>
+        <span class="lang-ru">Короткое сообщение утром в день визита. Финальная проверка.</span>
+      </p>
+      <div class="tpl-code">Good morning, [Name]! Just confirming we're seeing you today at [time]. Looking forward to it — see you soon.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">B3</span>
+      <span class="tpl-title"><span class="lang-en">Second pre-confirmation (no reply by 15:00)</span><span class="lang-ru">Повторное напоминание (нет ответа до 15:00)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">If the client didn't respond to B1 by 15:00. After this, if still no reply by 17:00 — call.</span>
+        <span class="lang-ru">Если клиент не ответил на B1 до 15:00. Если после этого нет ответа до 17:00 — звонок.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], just checking in — could you please confirm your visit tomorrow at [time]? We want to make sure everything is ready for you.</div>
+    </div>
+
+    <h2>C. <span class="lang-en">Cancellation and rescheduling</span><span class="lang-ru">Отмена и перенос</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">Handling requests to cancel or reschedule, with the first-time courtesy.</span>
+      <span class="lang-ru">Обработка запросов на отмену или перенос, с исключением на первый раз.</span>
+    </p>
+
+    <div class="tpl">
+      <span class="tpl-id">C1</span>
+      <span class="tpl-title"><span class="lang-en">Cancellation within 24 hours — first-time exception</span><span class="lang-ru">Отмена менее 24 часов — исключение на первый раз</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Most important template. Acknowledge, state policy, offer courtesy, immediately ask about new date.</span>
+        <span class="lang-ru">Самый важный шаблон. Признать, сообщить полиси, предложить исключение, сразу спросить про новую дату.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], thank you for letting us know.
+
+According to our policy, deposits are unfortunately non-refundable for changes within 24 hours. As an exception for your first reschedule, we'll keep your deposit valid for the next 3 months — you can use it whenever it works best for you.
+
+Do you already have a date in mind, or shall we reach out a bit later?</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">C2</span>
+      <span class="tpl-title"><span class="lang-en">Cancellation more than 24 hours in advance</span><span class="lang-ru">Отмена более 24 часов</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Standard rescheduling — deposit transfers automatically.</span>
+        <span class="lang-ru">Стандартный перенос — депозит переходит автоматически.</span>
+      </p>
+      <div class="tpl-code">Of course, [Name] — no problem at all. Your deposit will simply transfer to the new booking.
+
+When would you like to come in instead? Do you already have a preferred day, or shall I suggest a few options?</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">C3</span>
+      <span class="tpl-title"><span class="lang-en">Reschedule confirmation</span><span class="lang-ru">Подтверждение переноса</span></span>
+      <div class="tpl-code">Perfect, [Name] — I've moved your booking to [new day, date] at [time] with [specialist]. Your deposit is applied to this visit.
+
+I'll send you a reminder closer to the date. See you then!</div>
+    </div>
+
+    <h2>D. <span class="lang-en">No-show and follow-up</span><span class="lang-ru">No-show и follow-up</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">After a missed appointment, post-visit follow-up, Google review request.</span>
+      <span class="lang-ru">После пропущенного визита, follow-up после посещения, запрос Google-отзыва.</span>
+    </p>
+
+    <div class="tpl">
+      <span class="tpl-id">D1</span>
+      <span class="tpl-title"><span class="lang-en">After a no-show (1–2 days later)</span><span class="lang-ru">После no-show (через 1–2 дня)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Send after no-show with no response to calls. Tone is warm, not reproachful.</span>
+        <span class="lang-ru">Отправляется после no-show, когда клиент не ответил на звонки. Тон тёплый, не упрекающий.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], we missed you on [day, date] and hope everything is well on your side.
+
+Would you like to find another time? I'd be happy to look at the schedule with you.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">D2</span>
+      <span class="tpl-title"><span class="lang-en">Follow-up 3 days after visit</span><span class="lang-ru">Follow-up через 3 дня</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Sent in WhatsApp 3 days after the procedure. Genuine care, not a sales push.</span>
+        <span class="lang-ru">Отправляется в WhatsApp через 3 дня после процедуры. Искренняя забота, не продажа.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], hope you've been doing well after your visit on [day]! How are you feeling, and how is your skin settling?
+
+If anything has come up or you have any questions, please don't hesitate to let us know — we're here.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">D3</span>
+      <span class="tpl-title"><span class="lang-en">Google review request (in follow-up)</span><span class="lang-ru">Запрос Google-отзыва (в follow-up)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Only use if the client didn't leave a review at the clinic. Combine with D2.</span>
+        <span class="lang-ru">Использовать только если клиент не оставил отзыв в клинике. Объединяется с D2.</span>
+      </p>
+      <div class="tpl-code">[continuing from D2]
+
+If you have a moment and you're happy with your experience at Cosmo Di, a short Google review would mean the world to us — it really helps other women discover us. Here's the link:
+
+[Google review link]
+
+Thank you so much for being with us.</div>
+    </div>
+
+    <h2>E. <span class="lang-en">Sleeping base reactivation</span><span class="lang-ru">Реактивация спящей базы</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">Reaching out to clients who haven't been with us for 60+ days. Individual, not bulk. No offers — questions.</span>
+      <span class="lang-ru">Контакт с клиентами, которые не были у нас 60+ дней. Индивидуально, не массово. Не офферы — вопросы.</span>
+    </p>
+
+    <div class="callout">
+      <p>
+        <span class="lang-en">Before sending — open the client card. Adjust each template to mention the specific procedure they had last, their preferences, anything personal you know.</span>
+        <span class="lang-ru">Перед отправкой — открой карточку клиента. Подстрой каждый шаблон под конкретную процедуру, которую он делал, его предпочтения, что-то личное, что ты о нём знаешь.</span>
+      </p>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">E1</span>
+      <span class="tpl-title"><span class="lang-en">60–90 days (warm)</span><span class="lang-ru">60–90 дней (тёплый сегмент)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Reference their last procedure naturally. Focus is "how is your skin doing".</span>
+        <span class="lang-ru">Упоминаешь последнюю процедуру естественно. Фокус — «как ваша кожа».</span>
+      </p>
+      <div class="tpl-code">Hi [Name], it's been about [X] weeks since your [procedure] with us, and we just wanted to check in — how is your skin feeling? Are you happy with how the result has been holding?
+
+If anything is on your mind, or if it feels like a good time to plan the next step, we'd love to hear from you.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">E2</span>
+      <span class="tpl-title"><span class="lang-en">90–180 days (mid)</span><span class="lang-ru">90–180 дней (средний)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">More space for the client to reflect. Open the door without pushing.</span>
+        <span class="lang-ru">Больше пространства, чтобы клиент задумался. Открываем дверь, не давим.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], it's been a little while since we last saw you, and I wanted to reach out personally to ask — how have things been on the skin care side?
+
+Sometimes a few months after a [procedure type / treatment course], a gentle touch-up or refresh can really help maintain the result. If you'd like, Dr. Diana could take a look and suggest what makes sense at this stage — no pressure either way.
+
+Would it be helpful to chat about it?</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">E3</span>
+      <span class="tpl-title"><span class="lang-en">180+ days (cold)</span><span class="lang-ru">180+ дней (холодный)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Longer message. Sincere interest. Be open to "we're not coming back" as a valid answer.</span>
+        <span class="lang-ru">Длиннее. Искренний интерес. Будь открыта к ответу «больше не вернёмся» как нормальному.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], it's been quite some time since we've heard from you, and I wanted to reach out — not to sell you anything, but genuinely to ask how you are.
+
+How is your skin feeling these days? Is there anything we could have done differently, or anything that didn't work for you last time?
+
+Whatever your answer, we'd really value hearing it. And if at any point you feel like coming back for a fresh assessment, Dr. Diana would be glad to see you.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">E4</span>
+      <span class="tpl-title"><span class="lang-en">Filling an open slot (proactive)</span><span class="lang-ru">Заполнение свободного слота (проактивно)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">When there's a gap in tomorrow's schedule and you want to invite a specific client to fill it.</span>
+        <span class="lang-ru">Когда есть пробел в расписании на завтра, и ты хочешь пригласить конкретного клиента.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], a slot opened up tomorrow at [time] with Dr. Diana / our aesthetician — and you came to mind. If you've been thinking about [procedure / treatment], this could be a lovely opportunity.
+
+Would it work for you?</div>
+    </div>
+
+    <h2>F. <span class="lang-en">Complaints and difficult situations</span><span class="lang-ru">Жалобы и сложные ситуации</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">Medical concerns, service issues, discount requests. Always human, never corporate.</span>
+      <span class="lang-ru">Медицинские вопросы, проблемы с сервисом, запросы скидок. Всегда по-человечески, не корпоративно.</span>
+    </p>
+
+    <div class="tpl">
+      <span class="tpl-id">F1</span>
+      <span class="tpl-title"><span class="lang-en">Medical concern — transfer to nurse</span><span class="lang-ru">Медицинский вопрос — передача медсестре</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Client asks about a skin reaction, pain, or unexpected effect. Don't interpret — transfer.</span>
+        <span class="lang-ru">Клиент спрашивает о реакции кожи, боли, неожиданном эффекте. Не интерпретируй — передавай.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], thank you for letting us know — let's make sure this is taken care of right away.
+
+I'm passing your message to our nurse and to Dr. Diana — one of them will get back to you very shortly with guidance.
+
+In the meantime, please don't hesitate to share any photos or details that might help.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">F2</span>
+      <span class="tpl-title"><span class="lang-en">Service complaint — acknowledge and escalate</span><span class="lang-ru">Жалоба на сервис — признание и эскалация</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Delay, confusion, anything client-experience related. Apologise sincerely, don't make excuses.</span>
+        <span class="lang-ru">Задержка, путаница, что-либо связанное с опытом клиента. Извинись искренне, не оправдывайся.</span>
+      </p>
+      <div class="tpl-code">[Name], I'm really sorry this happened — that's not the experience we want for you, and we take it seriously.
+
+Let me flag this to Tatiana / Dr. Diana directly so we can make this right for you. One of us will be in touch shortly.
+
+Again, thank you for telling us — it genuinely matters.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">F3</span>
+      <span class="tpl-title"><span class="lang-en">Discount request — polite decline + escalation</span><span class="lang-ru">Запрос скидки — вежливый отказ + эскалация</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Don't negotiate yourself. Acknowledge the request, explain value, escalate if they push.</span>
+        <span class="lang-ru">Не торгуйся сама. Признай запрос, объясни ценность, эскалируй если настаивают.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], thank you for asking. Our pricing reflects the level of care, the premium products we use, and the individual approach Dr. Diana takes with every client. For this reason, we generally don't offer discounts.
+
+What we can do is make sure the plan recommended for you is truly the most efficient one for your priorities — Dr. Diana is very mindful about that during consultation.
+
+Would it help to chat about which procedures would give you the most value?</div>
+    </div>
+
+    <h2>G. <span class="lang-en">Objections</span><span class="lang-ru">Возражения</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">Don't defend the price — explain the value. Don't argue — propose a next step.</span>
+      <span class="lang-ru">Не защищай цену — объясняй ценность. Не спорь — предложи следующий шаг.</span>
+    </p>
+
+    <div class="tpl">
+      <span class="tpl-id">G1</span>
+      <span class="tpl-title">"<span class="lang-en">Expensive</span><span class="lang-ru">Дорого</span>"</span>
+      <div class="tpl-code">I completely understand — and that's a fair thing to consider. Our pricing reflects the level of care, premium products, and individual approach Dr. Diana takes with every client. It's why our clients tend to come back and stay with us.
+
+The best way to see if it's right for you is a consultation — Dr. Diana will recommend the most efficient plan within your priorities, so you know exactly what you're investing in. Would you like to come in for that?</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">G2</span>
+      <span class="tpl-title">"<span class="lang-en">I'll think about it</span><span class="lang-ru">Я подумаю</span>"</span>
+      <div class="tpl-code">Of course, [Name] — take your time. Is there something specific you'd like to think over, or any information that would help you decide?
+
+In the meantime, would it be okay if I check in with you in a week or so?</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">G3</span>
+      <span class="tpl-title">"<span class="lang-en">I have my own cosmetologist</span><span class="lang-ru">У меня есть свой косметолог</span>"</span>
+      <div class="tpl-code">Lovely to hear you have someone you trust — that matters. If ever you're curious about a specific procedure we offer (like Morpheus8, or our biorevitalization protocols, or our Wonder Axon body work), we'd be happy to share more, no pressure at all.
+
+In the meantime — we're here whenever you'd like to chat.</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">G4</span>
+      <span class="tpl-title">"<span class="lang-en">Competitors are cheaper</span><span class="lang-ru">У конкурентов дешевле</span>"</span>
+      <div class="tpl-code">Pricing varies a lot in Dubai depending on the protocols, the products, and the doctor's approach — so the headline price doesn't always tell the full story. What matters most is the result, and how it holds.
+
+If you'd like, Dr. Diana can do a Procedure Consultation, give you a clear plan, and you can decide from there whether the value works for you. Would you like to book that?</div>
+    </div>
+
+    <h2><span class="lang-en">Closing notes</span><span class="lang-ru">Закрывающие реплики</span></h2>
+
+    <p class="group-intro">
+      <span class="lang-en">Phrases for closing conversations gracefully when the booking is confirmed or the client is taking time to decide.</span>
+      <span class="lang-ru">Фразы для красивого закрытия разговора, когда запись подтверждена или клиент берёт время на решение.</span>
+    </p>
+
+    <div class="tpl">
+      <span class="tpl-id">Z1</span>
+      <span class="tpl-title"><span class="lang-en">After booking confirmed</span><span class="lang-ru">После подтверждения записи</span></span>
+      <div class="tpl-code">All set, [Name] — we'll see you on [day] at [time]. If anything comes up before then, just let us know. Looking forward to it!</div>
+    </div>
+
+    <div class="tpl">
+      <span class="tpl-id">Z2</span>
+      <span class="tpl-title"><span class="lang-en">When client is undecided</span><span class="lang-ru">Когда клиент не определился</span></span>
+      <div class="tpl-code">Take your time, [Name]. Whenever you're ready, we're here — no rush at all.</div>
+    </div>
+
+    <h2><span class="lang-en">A note on tone</span><span class="lang-ru">О тоне</span></h2>
+
+    <div class="callout">
+      <div class="lang-en">
+        <p>These templates are written in a warm, premium tone. Every word is chosen — verbs like "wonderful", "lovely", "of course"; openings like "happy to share", "thank you for asking"; closings like "looking forward to it", "we're here". This is not call-centre English, and it's not casual texting either. It is the voice of a clinic that takes its clients seriously.</p>
+        <p>If a template feels stiff for a particular client (some clients prefer very brief replies), soften it. If a template feels too casual (some clients are very formal), make it slightly more reserved. The templates are starting points — your judgement on the specific client is the final word.</p>
+      </div>
+      <div class="lang-ru">
+        <p>Эти шаблоны написаны в тёплом, премиум-тоне. Каждое слово подобрано — глаголы вроде «wonderful», «lovely», «of course»; открытия типа «happy to share», «thank you for asking»; закрытия типа «looking forward to it», «we're here». Это не call-центровый английский и не повседневный мессенджерский. Это голос клиники, которая серьёзно относится к своим клиентам.</p>
+        <p>Если шаблон кажется слишком формальным для конкретного клиента (некоторые клиенты предпочитают очень короткие ответы) — смягчи. Если кажется слишком неформальным (некоторые клиенты очень официальны) — сделай чуть более сдержанным. Шаблоны — стартовые точки, твоё суждение о конкретном клиенте — последнее слово.</p>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  injectHeader('05', 'Message templates', 'Шаблоны сообщений');
+  injectFooterNav(
+    '04-logic.html', 'Request handling logic', 'Логика работы с запросами',
+    '06-processes.html', 'Clinic processes', 'Процессы клиники'
+  );
+});
+</script>
+
+</body>
+</html>

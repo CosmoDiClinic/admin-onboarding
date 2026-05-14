@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-title-en="Logic — Cosmo Di Onboarding" data-title-ru="Логика — Онбординг Cosmo Di">Логика — Онбординг Cosmo Di</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js" defer></script>
+<script src="assets/partials.js" defer></script>
+</head>
+<body>
+
+<div class="page">
+
+  <section class="hero">
+    <span class="hero-eyebrow">04 — <span class="lang-en">Logic</span><span class="lang-ru">Логика</span></span>
+    <h1><span class="lang-en">Request handling logic</span><span class="lang-ru">Логика работы с запросами</span></h1>
+    <p class="hero-lead">
+      <span class="lang-en">Not a reference book of procedures, not a sales course. The simple logic for processing any client request.</span>
+      <span class="lang-ru">Не справочник по процедурам и не учебник по продажам. Простая логика для обработки любого запроса клиента.</span>
+    </p>
+  </section>
+
+  <main>
+
+    <p>
+      <span class="lang-en">Message templates for specific situations — in <a href="05-templates.html">Section 5</a>.</span>
+      <span class="lang-ru">Шаблоны конкретных сообщений — в <a href="05-templates.html">разделе 5</a>.</span>
+    </p>
+
+    <h2><span class="lang-en">Universal logic for any incoming request</span><span class="lang-ru">Универсальная логика обработки входящего запроса</span></h2>
+
+    <p>
+      <span class="lang-en">Any booking request goes through the same steps:</span>
+      <span class="lang-ru">Любой запрос на запись проходит через одни и те же шаги:</span>
+    </p>
+
+    <ol class="steps">
+      <li><span class="lang-en">Read the context — chat history + Alteg.io card (labels, comments, history)</span><span class="lang-ru">Прочитай контекст — переписка с клиентом + карточка в Alteg.io (лейблы, комментарии, история)</span></li>
+      <li><span class="lang-en">Determine the procedure type — injection / facial / hardware / body / hair / consultation</span><span class="lang-ru">Определи тип процедуры — инъекция / facial / аппаратное / тело / hair / консультация</span></li>
+      <li><span class="lang-en">Decide: is a consultation needed before the procedure? (see next section)</span><span class="lang-ru">Реши: нужна ли консультация перед процедурой? (см. ниже)</span></li>
+      <li><span class="lang-en">Determine the specialist — Diana or aesthetician (matrix in section 2.2)</span><span class="lang-ru">Определи специалиста — Диана или эстетист (по матрице раздела 2.2)</span></li>
+      <li><span class="lang-en">Determine the duration — open Alteg.io, see how long this procedure type takes</span><span class="lang-ru">Определи длительность — открой Alteg.io, посмотри сколько занимает этот тип процедуры</span></li>
+      <li><span class="lang-en">Ask the client's preference — morning / day / evening</span><span class="lang-ru">Спроси у клиента предпочтение — утро / день / вечер</span></li>
+      <li><span class="lang-en">Propose 2 specific slots in their window, optimal for Booking Discipline</span><span class="lang-ru">Предложи 2 конкретных слота в его окне, оптимальных для Booking Discipline</span></li>
+      <li><span class="lang-en">Reserve the slot in Alteg.io with a procedure-type comment</span><span class="lang-ru">Зафиксируй слот в Alteg.io с пометкой типа процедуры</span></li>
+      <li><span class="lang-en">Send the Stripe link for 200 AED deposit + explanation of the policy</span><span class="lang-ru">Отправь Stripe-ссылку на депозит 200 AED + объяснение политики</span></li>
+      <li><span class="lang-en">Confirm the booking after payment is received</span><span class="lang-ru">Подтверди запись после получения оплаты</span></li>
+    </ol>
+
+    <h3><span class="lang-en">What the admin writes in the booking comment in Alteg.io</span><span class="lang-ru">Что админ пишет в комментарии к записи в Alteg.io</span></h3>
+
+    <p>
+      <span class="lang-en">General procedure type with a note that the final choice of product / protocol is with the doctor at consultation.</span>
+      <span class="lang-ru">Общий тип процедуры с пометкой, что окончательный выбор препарата / протокола — за врачом на консультации.</span>
+    </p>
+
+    <p><span class="lang-en">Examples:</span><span class="lang-ru">Примеры:</span></p>
+
+    <ul>
+      <li><code>Lip filler — Dr. Diana to confirm product</code></li>
+      <li><code>Biorevitalization (skin quality) — Dr. Diana to recommend protocol</code></li>
+      <li><code>Facial / skincare — Aesthetist to assess</code></li>
+      <li><code>Wonder Axon — full body session</code></li>
+      <li><code>Consultation — acne concern</code></li>
+    </ul>
+
+    <p>
+      <span class="lang-en">If the client knows a specific product ("I want Plinest") — write: <code>Plinest requested by client, protocol to be confirmed by Dr. Diana</code>.</span>
+      <span class="lang-ru">Если клиент знает конкретный препарат («хочу Plinest») — пишешь: <code>Plinest requested by client, protocol to be confirmed by Dr. Diana</code>.</span>
+    </p>
+
+    <h2><span class="lang-en">When a consultation is needed before the procedure</span><span class="lang-ru">Когда нужна консультация перед процедурой</span></h2>
+
+    <p>
+      <span class="lang-en">This is the most important rule for processing a request.</span>
+      <span class="lang-ru">Это самое важное правило обработки запроса.</span>
+    </p>
+
+    <h3><span class="lang-en">Book consultation immediately (no procedure booking yet)</span><span class="lang-ru">Сразу записываем на консультацию (без записи на процедуру)</span></h3>
+
+    <p>
+      <span class="lang-en">Any request about a <strong>skin condition or problem</strong> that requires diagnostics and a plan:</span>
+      <span class="lang-ru">Любой запрос о <strong>состоянии или проблеме кожи</strong>, который требует диагностики и плана:</span>
+    </p>
+
+    <ul>
+      <li><span class="lang-en">Acne</span><span class="lang-ru">Акне</span></li>
+      <li><span class="lang-en">Post-acne, scars</span><span class="lang-ru">Постакне, рубцы</span></li>
+      <li><span class="lang-en">Rosacea, sensitive skin</span><span class="lang-ru">Розацеа, чувствительная кожа</span></li>
+      <li><span class="lang-en">Pigmentation, melasma, uneven tone</span><span class="lang-ru">Пигментация, мелазма, неровный тон</span></li>
+      <li><span class="lang-en">Hair loss</span><span class="lang-ru">Выпадение волос</span></li>
+      <li><span class="lang-en">General aging, "I want to look younger", "what would you recommend"</span><span class="lang-ru">Общее старение, «я хочу омолодиться», «что вы посоветуете»</span></li>
+      <li><span class="lang-en">"I don't know what I need"</span><span class="lang-ru">«Я не знаю, что мне нужно»</span></li>
+    </ul>
+
+    <p>
+      <span class="lang-en"><strong>Why:</strong> all these requests are medical diagnostics. Only the doctor can assess the skin, identify the cause, and create a plan. The admin books a consultation (Acne / VISIA / Procedure), not a procedure.</span>
+      <span class="lang-ru"><strong>Почему:</strong> все эти запросы — медицинская диагностика. Только врач может оценить кожу, определить причину и составить план. Админ записывает на consultation (Acne / VISIA / Procedure), не на процедуру.</span>
+    </p>
+
+    <h3><span class="lang-en">Book procedure directly (no consultation needed)</span><span class="lang-ru">Сразу записываем на процедуру (без консультации)</span></h3>
+
+    <p>
+      <span class="lang-en">The client knows what they want, and it's a procedure that doesn't require medical diagnostics:</span>
+      <span class="lang-ru">Клиент знает, что хочет, и это процедура, не требующая медицинской диагностики:</span>
+    </p>
+
+    <ul>
+      <li><span class="lang-en">Botox / Dysport (if the client is familiar with the procedure)</span><span class="lang-ru">Botox / Dysport (если клиент уже знаком с процедурой)</span></li>
+      <li><span class="lang-en">Lip or face filler (specific request)</span><span class="lang-ru">Филлер губ или лица (конкретный запрос)</span></li>
+      <li><span class="lang-en">HydraFacial and any facials</span><span class="lang-ru">HydraFacial и любые facials</span></li>
+      <li><span class="lang-en">Peels</span><span class="lang-ru">Пилинги</span></li>
+      <li>Dermapen</li>
+      <li>Wonder Axon</li>
+      <li>Lumecca IPL</li>
+      <li><span class="lang-en">Biorevitalization (if the client knows they want a skin quality course)</span><span class="lang-ru">Биоревитализация (если клиент знает, что хочет курс улучшения качества кожи)</span></li>
+      <li><span class="lang-en">Hair treatments</span><span class="lang-ru">Hair treatments</span></li>
+      <li><span class="lang-en">IV drips</span><span class="lang-ru">Капельницы</span></li>
+    </ul>
+
+    <div class="callout">
+      <p>
+        <span class="lang-en"><strong>For new clients on injections:</strong> even if the client knows they want Botox or filler — on the first visit, <strong>there's a short doctor assessment before the procedure</strong> (this is part of Diana's protocol, not a separate consultation booking). The admin books the procedure slot itself, the doctor decides on the spot.</span>
+        <span class="lang-ru"><strong>Для новых клиентов на инъекциях:</strong> даже если клиент знает, что хочет Botox или филлер — на первой встрече <strong>сначала короткая оценка врача перед процедурой</strong> (это часть протокола Дианы, не отдельная запись на consultation). Админ записывает на сам слот процедуры, врач на месте решает.</span>
+      </p>
+    </div>
+
+    <h3><span class="lang-en">If unclear — book a consultation</span><span class="lang-ru">Если непонятно — записываем на консультацию</span></h3>
+
+    <p>
+      <span class="lang-en">When in doubt — a consultation is always safer. Better for the client, better for the clinic.</span>
+      <span class="lang-ru">Сомневаешься — всегда лучше консультация. Это безопаснее и для клиента, и для клиники.</span>
+    </p>
+
+    <h2><span class="lang-en">Procedure type → specialist → what to write in Alteg.io</span><span class="lang-ru">Тип процедуры — специалист — что писать в Alteg.io</span></h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th><span class="lang-en">Client request</span><span class="lang-ru">Запрос клиента</span></th>
+          <th><span class="lang-en">Alteg.io type</span><span class="lang-ru">Тип в Alteg.io</span></th>
+          <th><span class="lang-en">Who</span><span class="lang-ru">К кому</span></th>
+          <th><span class="lang-en">Consultation first?</span><span class="lang-ru">Сначала консультация?</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Botox / Dysport</td><td>Botulinum</td><td>Diana</td><td><span class="lang-en">No (new clients — doctor assessment before)</span><span class="lang-ru">Нет (для новых — оценка перед процедурой)</span></td></tr>
+        <tr><td><span class="lang-en">Lip filler</span><span class="lang-ru">Филлер губ</span></td><td>Lip filler</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">Face filler (contour, cheeks)</span><span class="lang-ru">Филлер лица (контур, скулы)</span></td><td>Facial filler</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">Biorevitalization / skin booster</span><span class="lang-ru">Биоревитализация / skin booster</span></td><td>Skin treatment (injection)</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">Collagen stimulator (Plinest, Nithya, AesthetFill)</span><span class="lang-ru">Коллаген-стимулятор</span></td><td>Collagen stimulator</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>Lipotherapy</td><td>Lipotherapy</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>Hair treatment</td><td>Hair treatment</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>Morpheus8</td><td>Morpheus8</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">Dissolve old filler / New Lips</span><span class="lang-ru">Растворить старый филлер / New Lips</span></td><td>Filler dissolving</td><td>Diana</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>HydraFacial</td><td>HydraFacial</td><td>Aesthetician</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">Any facial / treatment</span><span class="lang-ru">Любой facial / уход</span></td><td>Facial</td><td>Aesthetician</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>DMK Enzyme</td><td>DMK</td><td>Aesthetician</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">Peel</span><span class="lang-ru">Пилинг</span></td><td>Peel</td><td>Aesthetician</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>Dermapen</td><td>Dermapen</td><td>Aesthetician</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>Wonder Axon</td><td>Wonder Axon</td><td>Aesthetician</td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td>Lumecca IPL</td><td>IPL</td><td><span class="lang-en">Aesthetician (Diana for VIP)</span><span class="lang-ru">Эстетист (Диана для VIP)</span></td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">IV drip</span><span class="lang-ru">Капельница</span></td><td>IV Drip</td><td><em><span class="lang-en">tbc</span><span class="lang-ru">уточняется</span></em></td><td><span class="lang-en">No</span><span class="lang-ru">Нет</span></td></tr>
+        <tr><td><span class="lang-en">Acne / post-acne / scars</span><span class="lang-ru">Акне / постакне / рубцы</span></td><td>Acne Consultation</td><td>Diana</td><td><strong><span class="lang-en">Yes</span><span class="lang-ru">Да</span></strong></td></tr>
+        <tr><td><span class="lang-en">Pigmentation / melasma</span><span class="lang-ru">Пигментация / мелазма</span></td><td>VISIA Consultation</td><td>Diana</td><td><strong><span class="lang-en">Yes</span><span class="lang-ru">Да</span></strong></td></tr>
+        <tr><td><span class="lang-en">Rosacea / sensitive</span><span class="lang-ru">Розацеа / чувствительная</span></td><td>Procedure Consultation</td><td>Diana</td><td><strong><span class="lang-en">Yes</span><span class="lang-ru">Да</span></strong></td></tr>
+        <tr><td><span class="lang-en">Hair loss (initial)</span><span class="lang-ru">Выпадение волос (первичный)</span></td><td>Procedure Consultation</td><td>Diana</td><td><strong><span class="lang-en">Yes</span><span class="lang-ru">Да</span></strong></td></tr>
+        <tr><td><span class="lang-en">"I don't know what I need"</span><span class="lang-ru">«Не знаю, что мне нужно»</span></td><td>VISIA or Procedure Consultation</td><td>Diana</td><td><strong><span class="lang-en">Yes</span><span class="lang-ru">Да</span></strong></td></tr>
+        <tr><td><span class="lang-en">General home routine</span><span class="lang-ru">Общий домашний уход</span></td><td>Homecare Consultation</td><td>Diana</td><td><strong><span class="lang-en">Yes</span><span class="lang-ru">Да</span></strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <p>
+        <span class="lang-en"><strong>Duration of each procedure — always check Alteg.io.</strong> The Procedures file explicitly lists: Botulinum 15–20 min, Juvederm Smile 20–30 min, Wonder Axon 25–30 min, Morpheus8 30–60 min, Lumecca IPL 15–30 min, all consultations 30 min, Lift & Glow Express 30 min. Everything else — verify in the system.</span>
+        <span class="lang-ru"><strong>Длительность каждой процедуры — всегда смотри в Alteg.io.</strong> В файле Procedures явно указаны: Botulinum 15–20 мин, Juvederm Smile 20–30 мин, Wonder Axon 25–30 мин, Morpheus8 30–60 мин, Lumecca IPL 15–30 мин, все консультации 30 мин, Lift & Glow Express 30 мин. Остальное — сверяйся с системой.</span>
+      </p>
+    </div>
+
+    <h2><span class="lang-en">Pre-confirmation and confirmation</span><span class="lang-ru">Pre-confirmation и confirmation</span></h2>
+
+    <ul>
+      <li><span class="lang-en"><strong>Day before the visit</strong> — pre-confirmation message (full protocol in <a href="03-standards.html">Section 3</a>)</span><span class="lang-ru"><strong>За день до визита</strong> — pre-confirmation сообщение (полный протокол в <a href="03-standards.html">разделе 3</a>)</span></li>
+      <li><span class="lang-en"><strong>Day of the visit, morning</strong> — short confirmation message</span><span class="lang-ru"><strong>В день визита утром</strong> — короткое confirmation сообщение</span></li>
+    </ul>
+
+    <p>
+      <span class="lang-en">If the client doesn't reply to pre-confirmation — second message by 15:00, phone call by 17:00, mark as tentative if no answer. Next morning by 12:00 — must close status (coming / cancel).</span>
+      <span class="lang-ru">Если клиент не ответил на pre-confirmation — повторное сообщение до 15:00, звонок до 17:00, помечаем tentative если не получили ответа. Утром следующего дня до 12:00 — обязательно закрываем статус (приходит / отменяем).</span>
+    </p>
+
+    <h2><span class="lang-en">Cancellation and rescheduling</span><span class="lang-ru">Отмена и перенос</span></h2>
+
+    <div class="callout">
+      <p>
+        <span class="lang-en"><strong>Live documents:</strong> <a href="https://docs.google.com/document/d/1vy0kTI86nyU63iI8cFpPPvfYVk4bVXqgVky8FDi09Ao/edit" target="_blank" rel="noopener">Reservation & Deposit SOP</a> · <a href="https://docs.google.com/spreadsheets/d/1cVaua4TL1i6pNJX9e32_lNsFAvOJuHP5JQLRsyryYbU/edit?gid=16415534" target="_blank" rel="noopener">Cancellations & Reschedules tracker</a> — log every cancellation here.</span>
+        <span class="lang-ru"><strong>Живые документы:</strong> <a href="https://docs.google.com/document/d/1vy0kTI86nyU63iI8cFpPPvfYVk4bVXqgVky8FDi09Ao/edit" target="_blank" rel="noopener">СОП по бронированиям и депозитам</a> · <a href="https://docs.google.com/spreadsheets/d/1cVaua4TL1i6pNJX9e32_lNsFAvOJuHP5JQLRsyryYbU/edit?gid=16415534" target="_blank" rel="noopener">Трекер отмен и переносов</a> — фиксируешь каждую отмену здесь.</span>
+      </p>
+    </div>
+
+    <h3><span class="lang-en">Main rule (per SOP)</span><span class="lang-ru">Главное правило (по СОП)</span></h3>
+
+    <p>
+      <span class="lang-en">The deposit is forfeited for cancellation or rescheduling within 24 hours of the visit.</span>
+      <span class="lang-ru">Депозит сгорает при отмене или переносе менее чем за 24 часа до визита.</span>
+    </p>
+
+    <h3><span class="lang-en">Logic for handling a cancellation / reschedule request</span><span class="lang-ru">Логика обработки запроса об отмене / переносе</span></h3>
+
+    <p>
+      <span class="lang-en"><strong>If the request is within 24 hours:</strong></span>
+      <span class="lang-ru"><strong>Если запрос менее чем за 24 часа:</strong></span>
+    </p>
+
+    <ol class="steps">
+      <li><span class="lang-en">Acknowledge the client's message</span><span class="lang-ru">Признать сообщение клиента</span></li>
+      <li><span class="lang-en">State the policy: "According to our policy, deposits are unfortunately non-refundable for changes within 24 hours."</span><span class="lang-ru">Сообщить политику: «According to our policy, deposits are unfortunately non-refundable for changes within 24 hours.»</span></li>
+      <li><span class="lang-en"><strong>Immediately offer the first-time exception:</strong> "As an exception for your first reschedule, we'll keep your deposit valid for the next 3 months — you can use it whenever it works best for you."</span><span class="lang-ru"><strong>Сразу же предложить исключение на первый раз:</strong> «As an exception for your first reschedule, we'll keep your deposit valid for the next 3 months — you can use it whenever it works best for you.»</span></li>
+      <li><span class="lang-en"><strong>Immediately ask about a new date:</strong> "Do you already have a date in mind, or shall we reach out a bit later?"</span><span class="lang-ru"><strong>Сразу же спросить про новую дату:</strong> «Do you already have a date in mind, or shall we reach out a bit later?»</span></li>
+      <li><span class="lang-en">If the client doesn't know: "When would it be okay to reach out to you again — next week, in two weeks?"</span><span class="lang-ru">Если клиент не знает: «When would it be okay to reach out to you again — next week, in two weeks?»</span></li>
+      <li><span class="lang-en">Record in the client card: "Deposit saved for 3 months on [date], expires [date]"</span><span class="lang-ru">Зафиксировать в карточке клиента: «Deposit saved for 3 months on [date], expires [date]»</span></li>
+      <li><span class="lang-en">Update the deposit tracker</span><span class="lang-ru">Обновить трекер депозитов</span></li>
+    </ol>
+
+    <p>
+      <span class="lang-en"><strong>If the request is more than 24 hours in advance:</strong> standard rescheduling. The deposit transfers automatically to the new booking. If the client doesn't know the date yet — keep the deposit for 3 months.</span>
+      <span class="lang-ru"><strong>Если запрос более чем за 24 часа:</strong> стандартный перенос. Депозит сохраняется автоматически на новую запись. Если клиент пока не знает дату — сохраняем депозит на 3 месяца.</span>
+    </p>
+
+    <div class="callout">
+      <p>
+        <span class="lang-en"><strong>What matters:</strong> do not apologise for the policy — it exists to protect the doctors' time. Immediately offer a solution (exception + new booking). Do not let the conversation end without a next step.</span>
+        <span class="lang-ru"><strong>Что важно:</strong> не извиняйся за политику — она существует для защиты времени врачей. Сразу предложи решение (исключение + новая запись). Не позволяй разговору заканчиваться без следующего шага.</span>
+      </p>
+    </div>
+
+    <h2><span class="lang-en">No-show</span><span class="lang-ru">No-show</span></h2>
+
+    <p>
+      <span class="lang-en">The main focus is prevention through quality pre-confirmation (Section 3.10). If a no-show happens anyway:</span>
+      <span class="lang-ru">Главный фокус — превенция через качественный pre-confirmation (раздел 3). Если no-show всё же случился:</span>
+    </p>
+
+    <ol class="steps">
+      <li><span class="lang-en"><strong>10 minutes after the appointment — call</strong> (same as for lateness, Section 3)</span><span class="lang-ru"><strong>Через 10 минут опоздания — звонок</strong> (как при опоздании, раздел 3)</span></li>
+      <li><span class="lang-en">If no answer — repeat call in 20–30 minutes</span><span class="lang-ru">Если клиент не отвечает — повторный звонок через 20–30 минут</span></li>
+      <li><span class="lang-en">If the client didn't get in touch — the deposit is forfeited, the booking is marked no-show in Alteg.io</span><span class="lang-ru">Если клиент не вышел на связь — депозит сгорает, запись помечается no-show в Alteg.io</span></li>
+      <li><span class="lang-en"><strong>1–2 days later — reach out:</strong> short message "Hope everything's well, we missed you on [date]. Would you like to reschedule?"</span><span class="lang-ru"><strong>Через 1–2 дня связываешься:</strong> короткое сообщение «Hope everything's well, we missed you on [date]. Would you like to reschedule?»</span></li>
+      <li><span class="lang-en">For rebooking — a new deposit is required (the old one was forfeited)</span><span class="lang-ru">При перезаписи — новый депозит обязателен (старый сгорел)</span></li>
+    </ol>
+
+    <h2><span class="lang-en">Follow-up after the visit</span><span class="lang-ru">Follow-up после визита</span></h2>
+
+    <p>
+      <span class="lang-en"><strong>Three days after the visit</strong> — fixed follow-up in WhatsApp. The day's schedule has a dedicated slot for this (see <a href="07-day.html">Section 7</a>).</span>
+      <span class="lang-ru"><strong>Через 3 дня после визита</strong> — фиксированный follow-up в WhatsApp. Время в дне выделено отдельно (см. <a href="07-day.html">раздел 7</a>).</span>
+    </p>
+
+    <p><span class="lang-en">Content of the message:</span><span class="lang-ru">Содержание сообщения:</span></p>
+
+    <ul>
+      <li><span class="lang-en">Greeting by name</span><span class="lang-ru">Обращение по имени</span></li>
+      <li><span class="lang-en">Recognition of the visit and procedure (without medical detail)</span><span class="lang-ru">Признание визита и процедуры (без медицинских деталей)</span></li>
+      <li><span class="lang-en">Question about wellbeing and skin</span><span class="lang-ru">Вопрос о самочувствии и коже</span></li>
+      <li><span class="lang-en"><strong>If the client didn't leave a Google review at the clinic</strong> — a gentle request to leave one</span><span class="lang-ru"><strong>Если клиент не оставил Google-отзыв в клинике</strong> — мягкая просьба оставить отзыв</span></li>
+      <li><span class="lang-en">Open close — "let us know if any questions come up"</span><span class="lang-ru">Открытый финал — «let us know if any questions come up»</span></li>
+    </ul>
+
+    <p>
+      <span class="lang-en">Specific template — in <a href="05-templates.html">Section 5</a>.</span>
+      <span class="lang-ru">Конкретный шаблон — в <a href="05-templates.html">разделе 5</a>.</span>
+    </p>
+
+    <h2><span class="lang-en">Google reviews</span><span class="lang-ru">Google-отзывы</span></h2>
+
+    <p>
+      <span class="lang-en"><strong>Priority — in the clinic.</strong> At the client's exit after the procedure:</span>
+      <span class="lang-ru"><strong>Приоритет — в клинике.</strong> При выходе клиента после процедуры:</span>
+    </p>
+
+    <ul>
+      <li><span class="lang-en">Ask how the visit went</span><span class="lang-ru">Спросить, как прошёл визит</span></li>
+      <li><span class="lang-en">If the answer is positive — ask them to leave a review on Google Maps</span><span class="lang-ru">Если ответ позитивный — попросить оставить отзыв на Google Maps</span></li>
+      <li><span class="lang-en">Give the client a small gift (samples) right then as thanks for the review</span><span class="lang-ru">Дать клиенту подарок (пробники) в благодарность за отзыв сразу же</span></li>
+    </ul>
+
+    <p>
+      <span class="lang-en"><strong>If it didn't work in the clinic</strong> (client in a hurry, no time) — review request in the follow-up message after 3 days.</span>
+      <span class="lang-ru"><strong>Если в клинике не получилось</strong> (клиент торопился, не было времени) — запрос на отзыв в follow-up сообщении через 3 дня.</span>
+    </p>
+
+    <h2><span class="lang-en">Working with the sleeping base</span><span class="lang-ru">Работа со спящей базой</span></h2>
+
+    <p>
+      <span class="lang-en"><strong>Who is sleeping:</strong> clients who haven't been with us for 60+ days.</span>
+      <span class="lang-ru"><strong>Кто считается спящим:</strong> клиенты, которые не были у нас 60+ дней.</span>
+    </p>
+
+    <p><span class="lang-en"><strong>Segments:</strong></span><span class="lang-ru"><strong>Сегменты:</strong></span></p>
+
+    <ul>
+      <li><span class="lang-en">60–90 days (warm)</span><span class="lang-ru">60–90 дней (тёплый)</span></li>
+      <li><span class="lang-en">90–180 days (mid)</span><span class="lang-ru">90–180 дней (средний)</span></li>
+      <li><span class="lang-en">180+ days (cold)</span><span class="lang-ru">180+ дней (холодный)</span></li>
+    </ul>
+
+    <p>
+      <span class="lang-en"><strong>Daily norm:</strong> 10 messages per day from the sleeping base. The day's schedule has a dedicated slot for this (see <a href="07-day.html">Section 7</a>).</span>
+      <span class="lang-ru"><strong>Норма дня:</strong> 10 сообщений в день из спящей базы. Время в дне выделено отдельно (см. <a href="07-day.html">раздел 7</a>).</span>
+    </p>
+
+    <h3><span class="lang-en">Logic of the message</span><span class="lang-ru">Логика сообщения</span></h3>
+
+    <p>
+      <span class="lang-en"><strong>This is not an offer broadcast.</strong> It is an individual contact with interest in the client.</span>
+      <span class="lang-ru"><strong>Это не рассылка офферов.</strong> Это индивидуальный контакт с интересом к клиенту.</span>
+    </p>
+
+    <p><span class="lang-en">Every message contains:</span><span class="lang-ru">Каждое сообщение содержит:</span></p>
+
+    <ol>
+      <li><span class="lang-en">Greeting by name</span><span class="lang-ru">Обращение по имени</span></li>
+      <li><span class="lang-en">Acknowledgement of the pause ("we noticed it's been a while since your last visit")</span><span class="lang-ru">Признание паузы («we noticed it's been a while since your last visit»)</span></li>
+      <li><span class="lang-en"><strong>Question about skin / wellbeing</strong> — no sales push</span><span class="lang-ru"><strong>Вопрос о коже/самочувствии</strong> — без продажи</span></li>
+      <li><span class="lang-en">Openness to the answer (even if it's "I don't want to do anything with you anymore")</span><span class="lang-ru">Открытость к ответу (даже если ответ «не хочу больше у вас лечиться»)</span></li>
+    </ol>
+
+    <p><span class="lang-en">We do not:</span><span class="lang-ru">Не делаем:</span></p>
+
+    <ul>
+      <li><span class="lang-en">Send "we have a 20% discount" instead of a question</span><span class="lang-ru">Отправляем «we have a 20% discount» вместо вопроса</span></li>
+      <li><span class="lang-en">Write "we miss you" without context</span><span class="lang-ru">Пишем «we miss you» без контекста</span></li>
+      <li><span class="lang-en">Push or write again the next day if the client is silent</span><span class="lang-ru">Давим, пишем повторно через день если клиент молчит</span></li>
+    </ul>
+
+    <h3><span class="lang-en">What we collect</span><span class="lang-ru">Что собираем</span></h3>
+
+    <p>
+      <span class="lang-en"><strong>Every client reply — record in the card.</strong> Especially valuable are reasons for leaving: they will become a base of typical objections that we can later work with systematically.</span>
+      <span class="lang-ru"><strong>Каждый ответ клиента — фиксируем в карточке.</strong> Особенно ценны причины ухода: они станут базой типичных возражений, по которой мы потом сможем системно работать.</span>
+    </p>
+
+    <p>
+      <span class="lang-en">If the client writes "not the right time, maybe in 2 months" — record the return date and come back exactly then, not earlier.</span>
+      <span class="lang-ru">Если клиент пишет «сейчас не до этого, может через 2 месяца» — фиксируем дату возврата и возвращаемся именно тогда, не раньше.</span>
+    </p>
+
+    <p>
+      <span class="lang-en">Birthdays and important dates — record in the client card (<a href="03-standards.html">Section 3</a> and the comment template).</span>
+      <span class="lang-ru">Дни рождения и важные даты — записываем в карточку клиента (<a href="03-standards.html">раздел 3</a> и шаблон комментариев).</span>
+    </p>
+
+    <p>
+      <span class="lang-en">Templates by segment — in <a href="05-templates.html">Section 5</a>.</span>
+      <span class="lang-ru">Шаблоны сообщений по сегментам — в <a href="05-templates.html">разделе 5</a>.</span>
+    </p>
+
+    <h2><span class="lang-en">Complaints</span><span class="lang-ru">Жалобы</span></h2>
+
+    <h3><span class="lang-en">Medical complaint</span><span class="lang-ru">Жалоба на медицинское состояние</span></h3>
+
+    <p>
+      <span class="lang-en">Skin reaction, pain, unexpected effect, something hurts, something looks wrong.</span>
+      <span class="lang-ru">Реакция кожи, болезненность, неожиданный эффект, что-то болит, что-то выглядит не так.</span>
+    </p>
+
+    <ol class="steps">
+      <li><span class="lang-en">Acknowledge, calm, do not panic</span><span class="lang-ru">Признать, успокоить, не паниковать</span></li>
+      <li><span class="lang-en"><strong>First — the nurse.</strong> She consults on aftercare and initial assessment</span><span class="lang-ru"><strong>Сначала — медсестра.</strong> Она консультирует по aftercare и первичной оценке</span></li>
+      <li><span class="lang-en">If the nurse considers it doctor-level — escalate to Diana</span><span class="lang-ru">Если медсестра считает, что нужен врач — эскалация к Диане</span></li>
+      <li><span class="lang-en">Record in the client card</span><span class="lang-ru">Зафиксировать в карточке клиента</span></li>
+    </ol>
+
+    <h3><span class="lang-en">Service complaint</span><span class="lang-ru">Жалоба на сервис</span></h3>
+
+    <p>
+      <span class="lang-en">Delay, rudeness, waiting, booking confusion, cleanliness.</span>
+      <span class="lang-ru">Задержка, грубость, ожидание, путаница в записи, чистота.</span>
+    </p>
+
+    <ol class="steps">
+      <li><span class="lang-en">Acknowledge and apologise sincerely, not in a template way</span><span class="lang-ru">Признать и извиниться искренне, не шаблонно</span></li>
+      <li><span class="lang-en">Do not make excuses, do not say "we had a hard day"</span><span class="lang-ru">Не оправдываться, не объяснять «у нас был сложный день»</span></li>
+      <li><span class="lang-en"><strong>Escalate to Tatiana or Diana</strong></span><span class="lang-ru"><strong>Эскалация к Татьяне или Диане</strong></span></li>
+      <li><span class="lang-en">If possible — offer a concrete resolution</span><span class="lang-ru">Если возможно — предложить конкретное решение</span></li>
+      <li><span class="lang-en">Record</span><span class="lang-ru">Зафиксировать</span></li>
+    </ol>
+
+    <h3><span class="lang-en">Price / financial complaint</span><span class="lang-ru">Жалоба на цены / финансы</span></h3>
+
+    <ol class="steps">
+      <li><span class="lang-en">Do not bargain</span><span class="lang-ru">Не торгуйся</span></li>
+      <li><span class="lang-en">Do not give a discount on your own</span><span class="lang-ru">Не давай скидку самостоятельно</span></li>
+      <li><span class="lang-en"><strong>Escalate to management</strong></span><span class="lang-ru"><strong>Эскалация к руководству</strong></span></li>
+    </ol>
+
+    <h3><span class="lang-en">General principle</span><span class="lang-ru">Общий принцип</span></h3>
+
+    <p>
+      <span class="lang-en">A human reply, not corporate. Not "we apologize for the inconvenience." Better — "I'm really sorry this happened, let me make this right for you."</span>
+      <span class="lang-ru">Ответ человеческий, не корпоративный. Не «we apologize for the inconvenience». Лучше — «I'm really sorry this happened, let me make this right for you.»</span>
+    </p>
+
+    <h2><span class="lang-en">Objections</span><span class="lang-ru">Возражения</span></h2>
+
+    <p>
+      <span class="lang-en">Not a script, but an <strong>approach.</strong> Every objection requires:</span>
+      <span class="lang-ru">Не флоу, а <strong>подход.</strong> Каждое возражение требует:</span>
+    </p>
+
+    <ol>
+      <li><span class="lang-en">Acknowledge the client's feeling</span><span class="lang-ru">Признать чувство клиента</span></li>
+      <li><span class="lang-en">Do not apologise for the clinic's positioning</span><span class="lang-ru">Не оправдываться за позиционирование</span></li>
+      <li><span class="lang-en">Explain value, not defend price</span><span class="lang-ru">Объяснить ценность, а не защищать цену</span></li>
+      <li><span class="lang-en">Offer a next step</span><span class="lang-ru">Предложить следующий шаг</span></li>
+    </ol>
+
+    <h3>"<span class="lang-en">Expensive</span><span class="lang-ru">Дорого</span>"</h3>
+
+    <p>
+      <span class="lang-en">Not "we are expensive because we are the best." Better:</span>
+      <span class="lang-ru">Не «мы дорогие, потому что лучшие». Лучше:</span>
+    </p>
+
+    <blockquote>The pricing reflects the level of care, premium products, and individual approach. The best way to see if it's right for you is a consultation — Dr. Diana will recommend the most efficient plan within your priorities.</blockquote>
+
+    <h3>"<span class="lang-en">I'll think about it</span><span class="lang-ru">Я подумаю</span>"</h3>
+
+    <p>
+      <span class="lang-en">Not "well, write if you change your mind." Better:</span>
+      <span class="lang-ru">Не «ну хорошо, пишите, если надумаете». Лучше:</span>
+    </p>
+
+    <blockquote>Of course. Is there something specific you'd like to consider, or any information that would help? Would it be alright if we check in with you in a week?</blockquote>
+
+    <h3>"<span class="lang-en">I already have my cosmetologist</span><span class="lang-ru">У меня уже есть свой косметолог</span>"</h3>
+
+    <p>
+      <span class="lang-en">We don't try to convince or criticise. Better:</span>
+      <span class="lang-ru">Не пытаемся переубедить или критиковать. Лучше:</span>
+    </p>
+
+    <blockquote>Lovely to hear you have someone you trust. If ever you're curious about a specific procedure we offer, we'd be happy to share more — no pressure.</blockquote>
+
+    <h3>"<span class="lang-en">Competitors are cheaper</span><span class="lang-ru">У конкурентов дешевле</span>"</h3>
+
+    <p>
+      <span class="lang-en">Not "we are better because N." Better:</span>
+      <span class="lang-ru">Не «у нас лучше потому что N». Лучше:</span>
+    </p>
+
+    <blockquote>Pricing varies a lot in Dubai depending on protocols, products, and approach. What matters most is the result. If you'd like, Dr. Diana can do a consultation to give you a clear plan, and you can decide if it's the right fit.</blockquote>
+
+  </main>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  injectHeader('04', 'Request handling logic', 'Логика работы с запросами');
+  injectFooterNav(
+    '03-standards.html', 'Communication & service standards', 'Стандарты общения и сервиса',
+    '05-templates.html', 'Message templates', 'Шаблоны сообщений'
+  );
+});
+</script>
+
+</body>
+</html>
