@@ -1,5 +1,5 @@
 /* ============================================================
-   Cosmo Di — Admin Onboarding
+   Cosmo Di â€” Admin Onboarding
    Editorial design inspired by clinic's Longevity Summer reference.
    Deep burgundy + cream + gold accents.
 ============================================================ */
@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Brand palette — exact match to clinic reference */
+  /* Brand palette â€” exact match to clinic reference */
   --burgundy-deep: #3a0d18;      /* darkest, hero background */
   --burgundy:      #5c1f2e;
   --burgundy-700:  #6e2438;
@@ -22,7 +22,7 @@
   --paper:        #fbf6ed;
   --bone:         #d8ccb8;
 
-  /* Gold accent — from reference */
+  /* Gold accent â€” from reference */
   --gold:         #c69d52;
   --gold-light:   #d9b985;
 
@@ -78,7 +78,7 @@ body {
 }
 
 /* ============================================================
-   LANGUAGE TOGGLE — bulletproof
+   LANGUAGE TOGGLE â€” bulletproof
    !important needed to override any element-specific display.
 ============================================================ */
 .lang-en, .lang-ru { display: none !important; }
@@ -196,7 +196,7 @@ blockquote {
 hr { border: 0; height: 1px; background: var(--bone); margin: var(--space-7) 0; }
 
 /* ============================================================
-   Top bar — clean, sits on the dark hero
+   Top bar â€” clean, sits on the dark hero
 ============================================================ */
 .topbar {
   position: sticky;
@@ -261,7 +261,7 @@ hr { border: 0; height: 1px; background: var(--bone); margin: var(--space-7) 0; 
   gap: var(--space-2);
 }
 
-.back-link::before { content: '←'; font-size: 1rem; }
+.back-link::before { content: 'â†'; font-size: 1rem; }
 .back-link:hover { color: var(--cream); }
 
 .resources-link {
@@ -417,7 +417,7 @@ main {
 }
 
 /* ============================================================
-   HERO — dark burgundy with white display type
+   HERO â€” dark burgundy with white display type
 ============================================================ */
 .hero-dark {
   background: var(--burgundy-deep);
@@ -488,7 +488,7 @@ main {
   color: var(--burgundy-deep);
 }
 
-/* Standard hero (for section pages — light cream version) */
+/* Standard hero (for section pages â€” light cream version) */
 .hero {
   max-width: var(--max-content);
   margin: 0 auto;
@@ -518,7 +518,7 @@ main {
 }
 
 /* ============================================================
-   Index — intro facts
+   Index â€” intro facts
 ============================================================ */
 .intro {
   background: var(--burgundy-deep);
@@ -690,7 +690,7 @@ main {
   gap: var(--space-2);
 }
 
-.section-arrow::after { content: '→'; transition: transform var(--t-base); }
+.section-arrow::after { content: 'â†’'; transition: transform var(--t-base); }
 .section-card:hover .section-arrow::after { transform: translateX(4px); }
 
 /* ============================================================
