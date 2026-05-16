@@ -18,6 +18,12 @@ function injectHeader(num, titleEn, titleRu) {
             '<span class="lang-en">All sections</span>' +
             '<span class="lang-ru">Все разделы</span>' +
           '</a>' +
+     '<button type="button" class="site-search-trigger" aria-label="Search">' +
+            '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">' +
+              '<circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>' +
+              '<line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' +
+            '</svg>' +
+          '</button>' +
           '<a href="11-resources.html" class="resources-link">' +
             '<span class="lang-en">Resources</span>' +
             '<span class="lang-ru">Ресурсы</span>' +
