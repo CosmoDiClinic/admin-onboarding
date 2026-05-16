@@ -175,12 +175,12 @@ Looking forward to seeing you!</div>
       <span class="tpl-id">A5</span>
       <span class="tpl-title"><span class="lang-en">Booking a consultation</span><span class="lang-ru">Запись на консультацию</span></span>
       <p class="tpl-note">
-        <span class="lang-en">For requests like "I have acne", "I want to look younger", "I don't know what I need".</span>
-        <span class="lang-ru">Для запросов вроде «у меня акне», «я хочу омолодиться», «не знаю что мне нужно».</span>
+        <span class="lang-en">For requests like "I have acne", "I want to look younger", "I don't know what I need". Present the free consultation as an offer. Check the consultation price in Alteg.io before sending (used only if the client won't do a procedure that day).</span>
+        <span class="lang-ru">Для запросов вроде «у меня акне», «я хочу омолодиться», «не знаю что мне нужно». Бесплатную консультацию подаём как оффер. Цену консультации посмотри в Alteg.io перед отправкой (нужна только если клиент не делает процедуру в этот день).</span>
       </p>
       <div class="tpl-code">Hi [Name], [concern] is exactly the kind of thing Dr. Diana works with regularly. The right first step here is a [Acne / VISIA / Procedure] Consultation — she'll examine your skin in detail, identify the underlying cause, and put together a personalised plan combining the right procedures and home care for your specific case.
 
-The consultation takes 30 minutes and is AED [price].
+The consultation takes 30 minutes. And here's the best part: if you do any procedure on the same day, the consultation is completely free. Otherwise it's AED [price].
 
 When works best for you — morning, afternoon, or evening? I'd be happy to find a couple of options.</div>
     </div>
@@ -195,19 +195,37 @@ When works best for you — morning, afternoon, or evening? I'd be happy to find
       <div class="tpl-code">Perfect, [Name]. I have [day] at [time] or [day] at [time] available. Which one works better for you?</div>
     </div>
 
-    <h2>B. <span class="lang-en">Pre-confirmation and confirmation</span><span class="lang-ru">Pre-confirmation и confirmation</span></h2>
+    <div class="tpl">
+      <span class="tpl-id">A7</span>
+      <span class="tpl-title"><span class="lang-en">First reply to an ad inquiry (concern-based)</span><span class="lang-ru">Первый ответ на запрос с рекламы (по проблеме)</span></span>
+      <p class="tpl-note">
+        <span class="lang-en">Client writes from an ad with a concern ("I want to treat acne", "I have pigmentation"). One reply: value + how it works + free consultation condition + scheduling. Logic in <a href="04-logic.html">Section 4</a>.</span>
+        <span class="lang-ru">Клиент пишет с рекламы с проблемой («хочу полечить акне», «у меня пигментация»). Один ответ: ценность + как это работает + условие бесплатной консультации + запись. Логика в <a href="04-logic.html">разделе 4</a>.</span>
+      </p>
+      <div class="tpl-code">Hi [Name], yes — we'd be glad to help with [concern]. We use individually selected combined protocols designed to give you a strong and lasting result, rather than a one-off effect.
+
+It works like this: you come in for a consultation, and Dr. Diana builds a personal treatment plan for you. If you do any procedure on the day of the consultation, the consultation is free.
+
+We work 10:00–18:00, Mon, Tue, Wed, Fri, Sat. What day and time would be most convenient for you?</div>
+      <p class="tpl-note">
+        <span class="lang-en">If the client won't do a procedure that day, the consultation is paid — check the current price in Alteg.io before quoting.</span>
+        <span class="lang-ru">Если клиент не делает процедуру в тот же день, консультация платная — посмотри актуальную цену в Alteg.io перед тем как называть.</span>
+      </p>
+    </div>
+
+    <h2>B. <span class="lang-en">Confirmations and follow-up</span><span class="lang-ru">Подтверждения и follow-up</span></h2>
 
     <p class="group-intro">
-      <span class="lang-en">Day-before pre-confirmation, day-of confirmation, follow-up to non-responders.</span>
-      <span class="lang-ru">Pre-confirmation за день, confirmation в день визита, follow-up неответивших.</span>
+      <span class="lang-en">You don't send pre-confirmation or confirmation — Flowcell does, automatically. B1 and B2 are shown here only so you know what the client received. Your only job is to check who didn't reply (two check-points: 14:00 and 17:00) and message the non-responders with B3.</span>
+      <span class="lang-ru">Pre-confirmation и confirmation ты не отправляешь — это делает Flowcell автоматически. B1 и B2 здесь только для справки, чтобы ты знала, что получил клиент. Твоя единственная задача — проверить, кто не ответил (две сверки: 14:00 и 17:00), и написать неответившим шаблоном B3.</span>
     </p>
 
     <div class="tpl">
       <span class="tpl-id">B1</span>
-      <span class="tpl-title"><span class="lang-en">Pre-confirmation (day before)</span><span class="lang-ru">Pre-confirmation (за день)</span></span>
+      <span class="tpl-title"><span class="lang-en">Pre-confirmation — automatic (reference)</span><span class="lang-ru">Pre-confirmation — автоматически (справочно)</span></span>
       <p class="tpl-note">
-        <span class="lang-en">Sent in the morning the day before the visit. Always include exact time and specialist.</span>
-        <span class="lang-ru">Отправляется утром за день до визита. Всегда указывай точное время и специалиста.</span>
+        <span class="lang-en">Sent automatically by Flowcell 24 hours before the procedure. You don't send this — shown so you know what the client received.</span>
+        <span class="lang-ru">Отправляется автоматически через Flowcell за 24 часа до процедуры. Ты это не отправляешь — показано, чтобы ты знала, что получил клиент.</span>
       </p>
       <div class="tpl-code">Hi [Name], a friendly reminder that we have you booked tomorrow, [day, date] at [time], for your [procedure] with Dr. Diana / our aesthetician.
 
@@ -216,20 +234,20 @@ Could you please confirm that you'll be coming? Just a quick "yes" or "see you t
 
     <div class="tpl">
       <span class="tpl-id">B2</span>
-      <span class="tpl-title"><span class="lang-en">Confirmation (day of)</span><span class="lang-ru">Confirmation (в день визита)</span></span>
+      <span class="tpl-title"><span class="lang-en">Confirmation — automatic (reference)</span><span class="lang-ru">Confirmation — автоматически (справочно)</span></span>
       <p class="tpl-note">
-        <span class="lang-en">Short message the morning of the visit. Final check.</span>
-        <span class="lang-ru">Короткое сообщение утром в день визита. Финальная проверка.</span>
+        <span class="lang-en">Sent automatically by Flowcell at 08:00 on the day of the visit. You don't send this.</span>
+        <span class="lang-ru">Отправляется автоматически через Flowcell в 08:00 в день визита. Ты это не отправляешь.</span>
       </p>
       <div class="tpl-code">Good morning, [Name]! Just confirming we're seeing you today at [time]. Looking forward to it — see you soon.</div>
     </div>
 
     <div class="tpl">
       <span class="tpl-id">B3</span>
-      <span class="tpl-title"><span class="lang-en">Second pre-confirmation (no reply by 15:00)</span><span class="lang-ru">Повторное напоминание (нет ответа до 15:00)</span></span>
+      <span class="tpl-title"><span class="lang-en">Follow-up to a non-responder (you send this)</span><span class="lang-ru">Follow-up неответившему (отправляешь ты)</span></span>
       <p class="tpl-note">
-        <span class="lang-en">If the client didn't respond to B1 by 15:00. After this, if still no reply by 17:00 — call.</span>
-        <span class="lang-ru">Если клиент не ответил на B1 до 15:00. Если после этого нет ответа до 17:00 — звонок.</span>
+        <span class="lang-en">Send at the 14:00 check to anyone who didn't reply to the automatic pre-confirmation. If still no reply at the 17:00 check — call.</span>
+        <span class="lang-ru">Отправляешь на сверке в 14:00 тем, кто не ответил на автоматический pre-confirmation. Если на сверке в 17:00 ответа всё ещё нет — звонок.</span>
       </p>
       <div class="tpl-code">Hi [Name], just checking in — could you please confirm your visit tomorrow at [time]? We want to make sure everything is ready for you.</div>
     </div>
