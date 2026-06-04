@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-title-en="Booking process — Cosmo Di Onboarding" data-title-ru="Процесс записи — Онбординг Cosmo Di">Процесс записи — Онбординг Cosmo Di</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js" defer></script>
+<script src="assets/partials.js" defer></script>
+<script src="assets/search.js" defer></script>
+<style>
+/* Page-specific helpers for the booking guide */
+.big-step { display:flex; gap:var(--space-4); align-items:flex-start; margin:var(--space-4) 0; padding:var(--space-5); background:var(--paper); border:1px solid var(--bone); border-radius:var(--radius-md); }
+.big-step-num { flex:none; width:42px; height:42px; border-radius:50%; background:var(--burgundy); color:var(--cream); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.4rem; font-weight:500; }
+.big-step-body { flex:1; }
+.big-step-body h3 { margin-top:0; }
+.yn-row { display:flex; align-items:center; gap:var(--space-4); padding:var(--space-4); border-radius:var(--radius-md); margin:var(--space-2) 0; font-size:0.95rem; }
+.yn-yes { background:#f5e0de; border-left:4px solid var(--danger); }
+.yn-no  { background:#e7ede1; border-left:4px solid var(--success); }
+.yn-tag { flex:none; font-family:var(--font-body); font-weight:700; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.3em 0.7em; border-radius:var(--radius-sm); }
+.yn-yes .yn-tag { background:var(--danger); color:#fff; }
+.yn-no .yn-tag  { background:var(--success); color:#fff; }
+.copybox { position:relative; background:#fff; border:1px solid var(--bone); border-left:3px solid var(--burgundy); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:var(--space-4) var(--space-5); margin:var(--space-3) 0; font-size:0.92rem; line-height:1.6; white-space:pre-wrap; }
+.copybox-label { font-family:var(--font-body); font-size:0.62rem; font-weight:700; text-transform:uppercase; letter-spacing:0.18em; color:var(--burgundy); margin-bottom:var(--space-2); display:block; }
+.deadline-grid { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3); margin:var(--space-4) 0; }
+.deadline-card { padding:var(--space-5); border-radius:var(--radius-md); text-align:center; background:var(--burgundy-50); border:1px solid var(--burgundy-100); }
+.deadline-card .big { display:block; font-family:var(--font-display); font-size:2rem; color:var(--burgundy); line-height:1; margin:var(--space-2) 0; }
+.pill-link { display:inline-block; background:var(--burgundy); color:var(--cream); border:none; border-radius:999px; padding:0.6rem 1.3rem; font-family:var(--font-body); font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.16em; text-decoration:none; margin:var(--space-2) var(--space-2) var(--space-2) 0; transition:background var(--t-fast); }
+.pill-link:hover { background:var(--burgundy-700); color:var(--cream); }
+@media (max-width:768px){ .deadline-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <section class="hero">
+    <span class="hero-eyebrow"><span class="lang-en">Booking</span><span class="lang-ru">Запись</span></span>
+    <h1><span class="lang-en">The booking process</span><span class="lang-ru">Процесс записи</span></h1>
+    <p class="hero-lead">
+      <span class="lang-en">A simple step-by-step guide. The full policy, all scripts and every edge case live in the SOP — link below.</span>
+      <span class="lang-ru">Простая пошаговая шпаргалка. Полная политика, все скрипты и каждый особый случай — в SOP, ссылка ниже.</span>
+    </p>
+  </section>
+
+  <main>
+
+    <div class="callout">
+      <span class="callout-title"><span class="lang-en">Full document</span><span class="lang-ru">Полный документ</span></span>
+      <p>
+        <span class="lang-en">This page is the short version. For exact wording, all cancellation scripts and special cases, open the full SOP:</span>
+        <span class="lang-ru">Эта страница — короткая версия. За точными формулировками, всеми скриптами отмен и особыми случаями — открой полный SOP:</span>
+      </p>
+      <a class="pill-link" href="https://docs.google.com/document/d/1vy0kTI86nyU63iI8cFpPPvfYVk4bVXqgVky8FDi09Ao/edit" target="_blank" rel="noopener">
+        <span class="lang-en">Open the full SOP</span><span class="lang-ru">Открыть полный SOP</span>
+      </a>
+    </div>
+
+    <!-- ============ STEP 1: FEE OR NOT ============ -->
+    <h2><span class="lang-en">Step 1. Does this client pay a reservation fee?</span><span class="lang-ru">Шаг 1. Берём ли с клиента reservation fee?</span></h2>
+
+    <p>
+      <span class="lang-en"><strong>Before booking anyone, open their client card in Alteg.io and check the history.</strong> The fee is 200 AED and it is always applied to the treatment on the day — the client loses nothing.</span>
+      <span class="lang-ru"><strong>Прежде чем кого-то записать, открой карточку клиента в Alteg.io и проверь историю.</strong> Fee — 200 AED, и он всегда идёт в счёт процедуры в день визита — клиент ничего не теряет.</span>
+    </p>
+
+    <div class="yn-row yn-yes">
+      <span class="yn-tag"><span class="lang-en">FEE</span><span class="lang-ru">FEE</span></span>
+      <div><span class="lang-en"><strong>New client</strong> — no visit history</span><span class="lang-ru"><strong>Новый клиент</strong> — нет истории визитов</span></div>
+    </div>
+    <div class="yn-row yn-yes">
+      <span class="yn-tag"><span class="lang-en">FEE</span><span class="lang-ru">FEE</span></span>
+      <div><span class="lang-en"><strong>No-show in the last 3 months</strong></span><span class="lang-ru"><strong>No-show за последние 3 месяца</strong></span></div>
+    </div>
+    <div class="yn-row yn-yes">
+      <span class="yn-tag"><span class="lang-en">FEE</span><span class="lang-ru">FEE</span></span>
+      <div><span class="lang-en"><strong>No visits in the last 6 months</strong> — even if they were a regular before</span><span class="lang-ru"><strong>Нет визитов за последние 6 месяцев</strong> — даже если раньше был постоянным</span></div>
+    </div>
+    <div class="yn-row yn-yes">
+      <span class="yn-tag"><span class="lang-en">FEE</span><span class="lang-ru">FEE</span></span>
+      <div><span class="lang-en"><strong>Card comment says a fee is required</strong> — after a previous late cancellation or no-show</span><span class="lang-ru"><strong>В карточке отметка, что fee обязателен</strong> — после прошлой поздней отмены или no-show</span></div>
+    </div>
+    <div class="yn-row yn-no">
+      <span class="yn-tag"><span class="lang-en">NO FEE</span><span class="lang-ru">БЕЗ FEE</span></span>
+      <div><span class="lang-en"><strong>Returning client, 3+ visits, clean history</strong> — book as normal. This is a loyalty signal.</span><span class="lang-ru"><strong>Постоянный клиент, 3+ визита, чистая история</strong> — записываем как обычно. Это знак лояльности.</span></div>
+    </div>
+
+    <div class="callout callout-warning">
+      <span class="callout-title"><span class="lang-en">Wording rule — never break this</span><span class="lang-ru">Правило формулировок — никогда не нарушай</span></span>
+      <div class="lang-en"><p>Always say <strong>"reservation fee" / "time reservation" / "securing your slot"</strong>. Never say "deposit", "prepayment", "advance payment" or "fee" on its own. In the UAE this is legally a payment to reserve a time slot, not prepayment for a service.</p></div>
+      <div class="lang-ru"><p>Всегда говори <strong>«reservation fee» / «time reservation» / «securing your slot»</strong>. Никогда — «deposit», «prepayment», «advance payment» или просто «fee». В ОАЭ это юридически оплата за резервирование времени, а не предоплата за услугу.</p></div>
+    </div>
+
+    <!-- ============ STEP 2: HOW TO TAKE THE FEE ============ -->
+    <h2><span class="lang-en">Step 2. If a fee IS required — 5 steps</span><span class="lang-ru">Шаг 2. Если fee нужен — 5 шагов</span></h2>
+
+    <div class="big-step">
+      <div class="big-step-num">1</div>
+      <div class="big-step-body">
+        <h3><span class="lang-en">Create the booking in Alteg.io</span><span class="lang-ru">Создай запись в Alteg.io</span></h3>
+        <p><span class="lang-en">As usual — date, time, treatment, specialist.</span><span class="lang-ru">Как обычно — дата, время, процедура, специалист.</span></p>
+      </div>
+    </div>
+
+    <div class="big-step">
+      <div class="big-step-num">2</div>
+      <div class="big-step-body">
+        <h3><span class="lang-en">Mark it "Waiting deposit"</span><span class="lang-ru">Отметь «Waiting deposit»</span></h3>
+        <p><span class="lang-en">Extended fields → Booking category → select <strong>"Waiting deposit"</strong>. Save. A banknote icon appears in the top-right of the calendar slot.</span><span class="lang-ru">Extended fields → Booking category → выбери <strong>«Waiting deposit»</strong>. Сохрани. В правом верхнем углу слота появится иконка банкноты.</span></p>
+      </div>
+    </div>
+
+    <div class="big-step">
+      <div class="big-step-num">3</div>
+      <div class="big-step-body">
+        <h3><span class="lang-en">Send Message 1 + Message 2</span><span class="lang-ru">Отправь Message 1 + Message 2</span></h3>
+        <p><span class="lang-en">Send both, one after the other, via WhatsApp. Message 1 = the request with the payment link. Message 2 = the booking conditions.</span><span class="lang-ru">Отправь оба, одно за другим, в WhatsApp. Message 1 = запрос со ссылкой на оплату. Message 2 = условия записи.</span></p>
+
+        <span class="copybox-label"><span class="lang-en">Message 1 — reservation fee request</span><span class="lang-ru">Message 1 — запрос reservation fee</span></span>
+        <div class="copybox">Hi [Name], thank you for reaching out to Cosmo Di! 🤍 We'd love to book you in with [Dr. Diana / Agnes] on [Date] at [Time] for [Treatment].
+
+To secure your appointment, we kindly ask for a time reservation of 200 AED. This amount is fully applied toward your treatment on the day — it simply holds your slot.
+
+You can pay via: https://buy.stripe.com/eVqfZie2J6eDfJ0d4j2sM02
+
+Please complete payment within [2 hours / 24 hours] to confirm your booking. Looking forward to seeing you! 🤍</div>
+
+        <span class="copybox-label"><span class="lang-en">Message 2 — booking conditions</span><span class="lang-ru">Message 2 — условия записи</span></span>
+        <div class="copybox">📋 Cosmo Di — Booking conditions:
+
+Your 200 AED reservation fee is fully credited toward your treatment on the day of your visit.
+
+If you cancel or reschedule with more than 24 hours' notice: your reservation fee is transferred to your next visit and stays valid for 3 months, or refunded in full on request.
+
+If you cancel with less than 24 hours' notice, or do not attend without contacting us: the reservation fee is non-refundable.
+
+Please let us know once you've completed the payment 🤍</div>
+      </div>
+    </div>
+
+    <div class="big-step">
+      <div class="big-step-num">4</div>
+      <div class="big-step-body">
+        <h3><span class="lang-en">After payment — change to "Deposit paid"</span><span class="lang-ru">После оплаты — смени на «Deposit paid»</span></h3>
+        <p><span class="lang-en">Open the booking → Extended fields → remove "Waiting deposit", add <strong>"Deposit paid"</strong>. The icon changes to a tick.</span><span class="lang-ru">Открой запись → Extended fields → убери «Waiting deposit», добавь <strong>«Deposit paid»</strong>. Иконка сменится на галочку.</span></p>
+      </div>
+    </div>
+
+    <div class="big-step">
+      <div class="big-step-num">5</div>
+      <div class="big-step-body">
+        <h3><span class="lang-en">On the day — apply the 200 AED</span><span class="lang-ru">В день визита — спиши 200 AED</span></h3>
+        <p><span class="lang-en">When closing the payment, apply the 200 AED reservation fee. The client pays only the remaining amount.</span><span class="lang-ru">При закрытии оплаты примени 200 AED reservation fee. Клиент доплачивает только остаток.</span></p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-title"><span class="lang-en">How to take payment</span><span class="lang-ru">Как принять оплату</span></span>
+      <div class="lang-en"><ul><li>Books in person → card machine or cash, as usual</li><li>Books remotely → send the Stripe link on WhatsApp</li><li>Bank transfers are <strong>not</strong> accepted</li></ul></div>
+      <div class="lang-ru"><ul><li>Записывается лично → карта или наличные, как обычно</li><li>Записывается удалённо → Stripe-ссылка в WhatsApp</li><li>Банковские переводы <strong>не</strong> принимаем</li></ul></div>
+    </div>
+
+    <!-- ============ STEP 3: DEADLINES ============ -->
+    <h2><span class="lang-en">Step 3. Payment deadlines</span><span class="lang-ru">Шаг 3. Сроки оплаты</span></h2>
+
+    <div class="deadline-grid">
+      <div class="deadline-card">
+        <span class="lang-en">Appointment today or tomorrow</span><span class="lang-ru">Запись сегодня или завтра</span>
+        <span class="big">2h</span>
+        <span class="lang-en">pay within 2 hours</span><span class="lang-ru">оплата в течение 2 часов</span>
+      </div>
+      <div class="deadline-card">
+        <span class="lang-en">Appointment in 2+ days</span><span class="lang-ru">Запись через 2+ дня</span>
+        <span class="big">24h</span>
+        <span class="lang-en">pay within 24 hours</span><span class="lang-ru">оплата в течение 24 часов</span>
+      </div>
+    </div>
+
+    <div class="callout callout-danger">
+      <span class="callout-title"><span class="lang-en">Daily check — 12:00 and 18:00</span><span class="lang-ru">Ежедневная проверка — 12:00 и 18:00</span></span>
+      <div class="lang-en"><ol><li>Open the Alteg.io calendar for the week.</li><li>Find every booking with the banknote icon ("Waiting deposit").</li><li>Send one follow-up to each client who hasn't paid.</li><li>No payment and no response by 18:00 → delete the booking.</li></ol><p>If an appointment is today or tomorrow and the client hasn't paid within 2 hours — send the follow-up straight away, don't wait until 12:00.</p></div>
+      <div class="lang-ru"><ol><li>Открой календарь Alteg.io на неделю.</li><li>Найди все записи с иконкой банкноты («Waiting deposit»).</li><li>Отправь один follow-up каждому, кто не оплатил.</li><li>Нет оплаты и нет ответа до 18:00 → удали запись.</li></ol><p>Если запись сегодня или завтра, а клиент не оплатил за 2 часа — отправь follow-up сразу, не жди 12:00.</p></div>
+    </div>
+
+    <!-- ============ STEP 4: CANCELLATIONS ============ -->
+    <h2><span class="lang-en">Step 4. Cancellations and reschedules</span><span class="lang-ru">Шаг 4. Отмены и переносы</span></h2>
+
+    <p><span class="lang-en">Start with one question: <strong>how much notice did the client give?</strong></span><span class="lang-ru">Начни с одного вопроса: <strong>за сколько клиент предупредил?</strong></span></p>
+
+    <div class="yn-row yn-no">
+      <span class="yn-tag"><span class="lang-en">24h+</span><span class="lang-ru">24ч+</span></span>
+      <div><span class="lang-en"><strong>Fee is safe.</strong> It transfers to the next visit (valid 3 months) or is refunded on request. Offer to rebook.</span><span class="lang-ru"><strong>Fee сохраняется.</strong> Переносится на следующий визит (3 месяца) или возврат по запросу. Предложи перезаписать.</span></div>
+    </div>
+    <div class="yn-row yn-yes">
+      <span class="yn-tag"><span class="lang-en">&lt;24h / no-show</span><span class="lang-ru">&lt;24ч / no-show</span></span>
+      <div><span class="lang-en"><strong>Fee is non-refundable.</strong> Exception: if it's the client's first time, the fee may be kept once for 3 months. Add a card comment. Repeat → new fee required next time.</span><span class="lang-ru"><strong>Fee сгорает.</strong> Исключение: если это первый раз, fee можно один раз сохранить на 3 месяца. Добавь отметку в карточку. Повтор → в следующий раз нужен новый fee.</span></div>
+    </div>
+
+    <div class="callout callout-warning">
+      <span class="callout-title"><span class="lang-en">Exact scripts are in the SOP</span><span class="lang-ru">Точные скрипты — в SOP</span></span>
+      <div class="lang-en"><p>There are 5 ready scripts for every cancellation case (paid / not paid, first time / repeat). Don't improvise the wording — copy the right script from the SOP. Section 8.</p></div>
+      <div class="lang-ru"><p>Есть 5 готовых скриптов на каждый случай отмены (оплатил / не оплатил, первый раз / повтор). Не придумывай формулировки — копируй нужный скрипт из SOP. Раздел 8.</p></div>
+    </div>
+
+    <p><span class="lang-en">If no new date is agreed, log the client in the Cancellations &amp; Reschedules sheet and follow up every Monday.</span><span class="lang-ru">Если новая дата не согласована, занеси клиента в таблицу Cancellations &amp; Reschedules и делай follow-up каждый понедельник.</span></p>
+
+    <!-- ============ STEP 5: OBJECTIONS ============ -->
+    <h2><span class="lang-en">Step 5. If the client pushes back</span><span class="lang-ru">Шаг 5. Если клиент возражает</span></h2>
+
+    <p><span class="lang-en">Stay warm and matter-of-fact — this is a standard step, not a confrontation. Short answers:</span><span class="lang-ru">Спокойно и доброжелательно — это стандартный шаг, не конфликт. Коротко:</span></p>
+
+    <ul>
+      <li><span class="lang-en"><strong>"Why pay in advance?"</strong> → The full appointment time is reserved for you; the reservation simply holds it. The amount goes fully toward your treatment.</span><span class="lang-ru"><strong>«Почему вперёд?»</strong> → Время визита резервируется полностью под вас; reservation просто удерживает его. Сумма полностью идёт в счёт процедуры.</span></li>
+      <li><span class="lang-en"><strong>"I'm a regular, I never miss."</strong> → For returning clients with a clean history we don't ask for a fee. You're all set to book as usual.</span><span class="lang-ru"><strong>«Я постоянный, не пропускаю.»</strong> → Постоянным с чистой историей fee не нужен. Записываем как обычно.</span></li>
+      <li><span class="lang-en"><strong>"This feels insulting."</strong> → It's not about trust — it's a standard process for every client, to protect both your time and the doctor's.</span><span class="lang-ru"><strong>«Это обидно.»</strong> → Дело не в доверии — это стандартный процесс для всех, он бережёт и ваше время, и время врача.</span></li>
+      <li><span class="lang-en"><strong>"Can Dr. Diana make an exception?"</strong> → I'll happily pass your message on. The process applies to all relevant bookings and isn't something we can override individually.</span><span class="lang-ru"><strong>«Может врач сделать исключение?»</strong> → С радостью передам. Процесс действует для всех таких записей, отдельно отменить мы его не можем.</span></li>
+    </ul>
+
+    <div class="callout">
+      <span class="callout-title"><span class="lang-en">Full objection answers</span><span class="lang-ru">Полные ответы на возражения</span></span>
+      <p>
+        <span class="lang-en">The complete wording for each objection is in the SOP, Section 9.</span>
+        <span class="lang-ru">Полные формулировки на каждое возражение — в SOP, раздел 9.</span>
+      </p>
+      <a class="pill-link" href="https://docs.google.com/document/d/1vy0kTI86nyU63iI8cFpPPvfYVk4bVXqgVky8FDi09Ao/edit" target="_blank" rel="noopener">
+        <span class="lang-en">Open the full SOP</span><span class="lang-ru">Открыть полный SOP</span>
+      </a>
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  injectHeader('', 'Booking process', 'Процесс записи');
+  injectFooterNav(
+    'index.html', 'Home', 'Главная',
+    null, null, null
+  );
+});
+</script>
+
+</body>
+</html>
