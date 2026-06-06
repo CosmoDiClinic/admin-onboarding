@@ -28,6 +28,20 @@
 .pill-link { display:inline-block; background:var(--burgundy); color:var(--cream); border:none; border-radius:999px; padding:0.6rem 1.3rem; font-family:var(--font-body); font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.16em; text-decoration:none; margin:var(--space-2) var(--space-2) var(--space-2) 0; transition:background var(--t-fast); }
 .pill-link:hover { background:var(--burgundy-700); color:var(--cream); }
 @media (max-width:768px){ .deadline-grid{grid-template-columns:1fr;} }
+.script-acc { margin:var(--space-3) 0; }
+.script-acc details { border:1px solid var(--bone); border-radius:var(--radius-md); margin-bottom:var(--space-2); background:#fff; overflow:hidden; }
+.script-acc details[open] { border-color:var(--burgundy-300); }
+.script-acc summary { padding:var(--space-3) var(--space-4); cursor:pointer; list-style:none; display:flex; align-items:center; gap:var(--space-3); font-family:var(--font-body); font-size:0.9rem; font-weight:600; color:var(--ink-deep); }
+.script-acc summary::-webkit-details-marker { display:none; }
+.script-acc summary::after { content:'+'; margin-left:auto; font-size:1.3rem; color:var(--burgundy); font-weight:300; transition:transform var(--t-base); }
+.script-acc details[open] summary::after { transform:rotate(45deg); }
+.script-acc summary:hover { background:var(--burgundy-50); }
+.script-tag { flex:none; font-family:var(--font-body); font-weight:700; font-size:0.64rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.28em 0.6em; border-radius:var(--radius-sm); }
+.script-tag-safe { background:var(--success); color:#fff; }
+.script-tag-warn { background:var(--warning); color:#fff; }
+.script-tag-danger { background:var(--danger); color:#fff; }
+.script-body { padding:0 var(--space-4) var(--space-4); border-top:1px solid var(--bone); }
+.script-when { font-size:0.85rem; color:var(--ink-light); margin:var(--space-3) 0; font-style:italic; }
 </style>
 </head>
 <body>
@@ -196,10 +210,53 @@ Please let us know once you've completed the payment 🤍</div>
       <div><span class="lang-en"><strong>Fee is non-refundable.</strong> Exception: if it's the client's first time, the fee may be kept once for 3 months. Add a card comment. Repeat → new fee required next time.</span><span class="lang-ru"><strong>Fee сгорает.</strong> Исключение: если это первый раз, fee можно один раз сохранить на 3 месяца. Добавь отметку в карточку. Повтор → в следующий раз нужен новый fee.</span></div>
     </div>
 
+    <h3><span class="lang-en">Ready scripts — copy and edit</span><span class="lang-ru">Готовые скрипты — копируй и редактируй</span></h3>
+    <p><span class="lang-en">Click to open. Edit the name and details, then send. Don't improvise the wording.</span><span class="lang-ru">Нажми, чтобы раскрыть. Поменяй имя и детали, потом отправь. Не придумывай формулировки сам.</span></p>
+
+    <div class="script-acc">
+
+      <details>
+        <summary>
+          <span class="script-tag script-tag-safe">24h+</span>
+          <span class="lang-en">Cancelled 24h+ in advance (fee was paid)</span>
+          <span class="lang-ru">Отмена за 24ч+ (fee был оплачен)</span>
+        </summary>
+        <div class="script-body">
+          <p class="script-when"><span class="lang-en">When: client gave 24 hours' notice or more, and had paid a reservation fee. The fee is safe.</span><span class="lang-ru">Когда: клиент предупредил за 24 часа или больше и платил reservation fee. Fee сохраняется.</span></p>
+          <div class="copybox">Hi [Name], no problem at all — thank you for letting us know in advance. Your 200 AED reservation fee is still with us and valid for 3 months. We'd love to rebook you whenever works best — just let us know a date and time. If you'd prefer a refund instead, we're happy to arrange that too. 🤍</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="script-tag script-tag-warn">&lt;24h · 1st</span>
+          <span class="lang-en">Cancelled less than 24h — first time</span>
+          <span class="lang-ru">Отмена менее 24ч — первый раз</span>
+        </summary>
+        <div class="script-body">
+          <p class="script-when"><span class="lang-en">When: less than 24h notice or no-show, fee was paid, and it's the first time. One-time exception — keep the fee for 3 months. Add a card comment.</span><span class="lang-ru">Когда: менее 24ч или no-show, fee был оплачен, и это первый раз. Разовое исключение — держим fee 3 месяца. Добавь отметку в карточку.</span></p>
+          <div class="copybox">Hi [Name], we're sorry we missed you. As per our booking conditions, the reservation fee is non-refundable for cancellations made less than 24 hours in advance. As an exception this first time, we'll keep your 200 AED reservation fee for 3 months so you can use it toward a future treatment. The fee can only be kept once. We'd love to rebook you — just let us know a date and time. 🤍</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="script-tag script-tag-danger">&lt;24h · repeat</span>
+          <span class="lang-en">Cancelled less than 24h — repeat</span>
+          <span class="lang-ru">Отмена менее 24ч — повторно</span>
+        </summary>
+        <div class="script-body">
+          <p class="script-when"><span class="lang-en">When: less than 24h notice or no-show, and this has happened before. The fee is non-refundable; a new fee is required to rebook.</span><span class="lang-ru">Когда: менее 24ч или no-show, и это уже было раньше. Fee сгорает; для перезаписи нужен новый fee.</span></p>
+          <div class="copybox">Hi [Name], we're sorry we missed you. As per our booking conditions, the reservation fee is non-refundable for cancellations made less than 24 hours in advance. To rebook, a new 200 AED reservation fee is required to secure your slot — this is fully credited toward your treatment on the day. Just let us know when you'd like to come in and we'll send the payment link. 🤍</div>
+        </div>
+      </details>
+
+    </div>
+
     <div class="callout callout-warning">
-      <span class="callout-title"><span class="lang-en">Exact scripts are in the SOP</span><span class="lang-ru">Точные скрипты — в SOP</span></span>
-      <div class="lang-en"><p>There are 5 ready scripts for every cancellation case (paid / not paid, first time / repeat). Don't improvise the wording — copy the right script from the SOP. Section 8.</p></div>
-      <div class="lang-ru"><p>Есть 5 готовых скриптов на каждый случай отмены (оплатил / не оплатил, первый раз / повтор). Не придумывай формулировки — копируй нужный скрипт из SOP. Раздел 8.</p></div>
+      <span class="callout-title"><span class="lang-en">Other cases — check the SOP</span><span class="lang-ru">Другие случаи — смотри SOP</span></span>
+      <div class="lang-en"><p>There's a separate case when the client cancelled late but had <strong>not</strong> paid a fee (loyal client booked without one). For that and any edge case, use the full scripts in the SOP, Section 8.</p></div>
+      <div class="lang-ru"><p>Есть отдельный случай, когда клиент отменил поздно, но <strong>не</strong> платил fee (постоянный, записан без него). Для него и любых особых случаев — полные скрипты в SOP, раздел 8.</p></div>
     </div>
 
     <p><span class="lang-en">If no new date is agreed, log the client in the Cancellations &amp; Reschedules sheet and follow up every Monday.</span><span class="lang-ru">Если новая дата не согласована, занеси клиента в таблицу Cancellations &amp; Reschedules и делай follow-up каждый понедельник.</span></p>
