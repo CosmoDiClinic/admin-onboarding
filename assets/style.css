@@ -1316,3 +1316,19 @@ tbody tr:hover { background: var(--paper); }
 @media (max-width: 768px) {
   .banner-duo { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Home banner trio – Cheat sheet + Booking + Client journey
+============================================================ */
+.banner-trio { grid-template-columns: repeat(3, 1fr); }
+
+.duo-journey {
+  background: var(--burgundy-700);
+  color: var(--cream);
+}
+
+.duo-journey:hover { background: var(--burgundy); }
+
+@media (max-width: 1000px) {
+  .banner-trio { grid-template-columns: 1fr; }
+}

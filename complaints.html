@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-title-en="Complaints – Cosmo Di Onboarding" data-title-ru="Жалобы – Онбординг Cosmo Di">Жалобы – Онбординг Cosmo Di</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js" defer></script>
+<script src="assets/partials.js" defer></script>
+<script src="assets/search.js" defer></script>
+<style>
+.pill-link { display:inline-block; background:var(--burgundy); color:var(--cream); border:none; border-radius:999px; padding:0.55rem 1.2rem; font-family:var(--font-body); font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.16em; text-decoration:none; margin:var(--space-2) var(--space-2) var(--space-2) 0; transition:background var(--t-fast); }
+.pill-link:hover { background:var(--burgundy-700); color:var(--cream); }
+.pill-link.ghost { background:transparent; color:var(--burgundy); border:1px solid var(--burgundy); }
+.pill-link.ghost:hover { background:var(--burgundy); color:var(--cream); }
+.case-table td:first-child { font-weight:600; color:var(--burgundy); white-space:nowrap; }
+.case-table td:last-child { white-space:nowrap; color:var(--ink-light); font-size:0.85rem; }
+.three-col { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-3); margin:var(--space-4) 0; }
+.three-col > div { border-radius:var(--radius-md); padding:var(--space-4); font-size:0.9rem; }
+.three-col h4 { margin-top:0; }
+.three-col ul { margin-bottom:0; padding-left:var(--space-4); }
+.col-ok { background:#e7ede1; border:1px solid #c8d3c1; }
+.col-ok h4 { color:var(--success); }
+.col-ask { background:#f9efde; border:1px solid #ead7b4; }
+.col-ask h4 { color:var(--warning); }
+.col-never { background:#f5e0de; border:1px solid #e5beba; }
+.col-never h4 { color:var(--danger); }
+.table-wrap { overflow-x:auto; }
+@media (max-width:768px){ .three-col{grid-template-columns:1fr;} .case-table td:last-child{white-space:normal;} }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <section class="hero">
+    <span class="hero-eyebrow">12 – <span class="lang-en">Complaints</span><span class="lang-ru">Жалобы</span></span>
+    <h1><span class="lang-en">Working with complaints</span><span class="lang-ru">Работа с жалобами</span></h1>
+    <p class="hero-lead">
+      <span class="lang-en">You own every complaint, from the first contact to closure. The Clinic Manager decides on anything free, discounted or refunded.</span>
+      <span class="lang-ru">Каждую жалобу ведёшь ты, от первого обращения до закрытия. Всё бесплатное, со скидкой или с возвратом решает Clinic Manager.</span>
+    </p>
+  </section>
+
+  <main>
+
+    <div class="callout">
+      <span class="callout-title"><span class="lang-en">The full policy and scripts</span><span class="lang-ru">Полная политика и скрипты</span></span>
+      <p>
+        <span class="lang-en">This page is the short version. The full Complaint Handling Policy has every step, the scripts (A1–A14) and what to do with difficult behaviour. Read it in full before your first complaint.</span>
+        <span class="lang-ru">Здесь короткая версия. В полной политике по жалобам – все шаги, скрипты (A1–A14) и что делать при сложном поведении пациента. Прочитай её целиком до первой жалобы.</span>
+      </p>
+      <a class="pill-link" href="https://docs.google.com/document/d/1dycVuJgrlj-RnOztN-vFJkI1D6DZjm8a/edit?usp=drive_link&amp;ouid=106162370170536417418&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener"><span class="lang-en">Complaint Handling Policy</span><span class="lang-ru">Политика по жалобам</span></a>
+      <a class="pill-link ghost" href="https://docs.google.com/document/d/1u9QdH5gqVpjlW0faERgqM78ElzOsRc3I/edit?usp=drive_link&amp;ouid=106162370170536417418&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener"><span class="lang-en">Complimentary Service Form</span><span class="lang-ru">Complimentary Service Form</span></a>
+    </div>
+
+    <h2><span class="lang-en">The rules</span><span class="lang-ru">Правила</span></h2>
+    <ul>
+      <li><span class="lang-en"><strong>Every complaint is in writing.</strong> If the patient complains in person or by phone, you write a short summary of what they said and what they are asking for, send it to them on WhatsApp to confirm, and ask for photos. Never tell a patient that complaints are accepted "only in writing".</span><span class="lang-ru"><strong>Каждая жалоба – письменно.</strong> Если пациент жалуется лично или по телефону, ты пишешь короткое резюме: что он сказал и о чём просит, отправляешь ему в WhatsApp на подтверждение и просишь фото. Никогда не говори пациенту, что жалобы принимаются «только письменно».</span></li>
+      <li><span class="lang-en"><strong>One owner – you.</strong> You lead the case from the first contact to closure, and all communication with the patient goes through you.</span><span class="lang-ru"><strong>Один ответственный – ты.</strong> Ты ведёшь кейс от первого обращения до закрытия, и вся коммуникация с пациентом идёт через тебя.</span></li>
+      <li><span class="lang-en"><strong>The Clinic Manager decides.</strong> Any free, discounted or corrective treatment, product, refund or other compensation.</span><span class="lang-ru"><strong>Решает Clinic Manager.</strong> Любая бесплатная, со скидкой или корректирующая процедура, продукт, возврат или другая компенсация.</span></li>
+      <li><span class="lang-en"><strong>Medical stays medical.</strong> Only the specialist who did the procedure assesses the result, and the Medical Lead / Dr. Diana reviews it. You never judge the result.</span><span class="lang-ru"><strong>Медицинское остаётся медицинским.</strong> Результат оценивает только специалист, который делал процедуру, а Medical Lead / доктор Диана его разбирает. Ты результат не оцениваешь никогда.</span></li>
+      <li><span class="lang-en"><strong>Nothing for pressure.</strong> Nothing is given free or discounted because a patient shouts, threatens or repeats a demand. And a real concern is still handled properly, even if the patient is difficult.</span><span class="lang-ru"><strong>Ничего за давление.</strong> Ничего не даётся бесплатно или со скидкой потому, что пациент кричит, угрожает или повторяет требование. И при этом реальная проблема разбирается как положено, даже если пациент сложный.</span></li>
+    </ul>
+
+    <h2><span class="lang-en">How a case runs</span><span class="lang-ru">Как идёт кейс</span></h2>
+
+    <div class="table-wrap">
+    <table class="case-table">
+      <thead><tr>
+        <th><span class="lang-en">Step</span><span class="lang-ru">Шаг</span></th>
+        <th><span class="lang-en">What you do</span><span class="lang-ru">Что делаешь</span></th>
+        <th><span class="lang-en">When</span><span class="lang-ru">Когда</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1. <span class="lang-en">Receive</span><span class="lang-ru">Принять</span></td><td><span class="lang-en">Listen without interrupting. Don't argue or promise anything. Find out what happened and what the patient wants. In the clinic, move to a private room. Offer a follow-up consultation straight away.</span><span class="lang-ru">Выслушать, не перебивая. Не спорить и ничего не обещать. Выяснить, что произошло и чего хочет пациент. В клинике – перейти в отдельный кабинет. Сразу предложить консультацию-фоллоуап.</span></td><td><span class="lang-en">On contact</span><span class="lang-ru">При обращении</span></td></tr>
+        <tr><td>2. <span class="lang-en">Confirm in writing</span><span class="lang-ru">Подтвердить письменно</span></td><td><span class="lang-en">Verbal complaint: send the summary on WhatsApp to confirm and ask for photos. Written complaint: reply and confirm the next step.</span><span class="lang-ru">Устная жалоба: отправить резюме в WhatsApp на подтверждение и попросить фото. Письменная: ответить и подтвердить следующий шаг.</span></td><td><span class="lang-en">Within 2 working hours</span><span class="lang-ru">В течение 2 рабочих часов</span></td></tr>
+        <tr><td>3. <span class="lang-en">Record</span><span class="lang-ru">Зафиксировать</span></td><td><span class="lang-en">Record the case with the summary and photos, as described in the policy.</span><span class="lang-ru">Зафиксировать кейс с резюме и фото, как описано в политике.</span></td><td><span class="lang-en">Same day</span><span class="lang-ru">В тот же день</span></td></tr>
+        <tr><td>4. <span class="lang-en">Follow-up</span><span class="lang-ru">Фоллоуап</span></td><td><span class="lang-en">For complaints about a result: book a complimentary follow-up with the specialist who did the procedure. Book it at the first contact, without waiting for the written confirmation.</span><span class="lang-ru">Для жалоб на результат: записать на бесплатную консультацию к специалисту, который делал процедуру. Записать сразу при первом контакте, не дожидаясь письменного подтверждения.</span></td><td><span class="lang-en">Within 3–5 working days</span><span class="lang-ru">В течение 3–5 рабочих дней</span></td></tr>
+        <tr><td>5. <span class="lang-en">Medical review</span><span class="lang-ru">Медицинский разбор</span></td><td><span class="lang-en">The specialist writes an assessment and recommendation; the Medical Lead / Dr. Diana reviews it. You collect both.</span><span class="lang-ru">Специалист пишет оценку и рекомендацию, Medical Lead / доктор Диана её разбирает. Ты собираешь и то, и другое.</span></td><td><span class="lang-en">Same day as follow-up</span><span class="lang-ru">В день фоллоуапа</span></td></tr>
+        <tr><td>6. <span class="lang-en">Decision</span><span class="lang-ru">Решение</span></td><td><span class="lang-en">If the patient asks for anything beyond the follow-up, send the case summary to the Clinic Manager. She decides.</span><span class="lang-ru">Если пациент просит что-то сверх фоллоуапа, отправить резюме кейса Clinic Manager. Решает она.</span></td><td><span class="lang-en">Manager's working days</span><span class="lang-ru">В рабочие дни менеджера</span></td></tr>
+        <tr><td>7. <span class="lang-en">Communicate</span><span class="lang-ru">Сообщить</span></td><td><span class="lang-en">Tell the patient the decision, by phone or in person where possible, then confirm briefly in writing.</span><span class="lang-ru">Сообщить пациенту решение, по возможности по телефону или лично, потом коротко подтвердить письменно.</span></td><td><span class="lang-en">Within 3 working days of follow-up</span><span class="lang-ru">В течение 3 рабочих дней после фоллоуапа</span></td></tr>
+        <tr><td>8. <span class="lang-en">Close</span><span class="lang-ru">Закрыть</span></td><td><span class="lang-en">Carry out what was agreed, check it was done, and close the case.</span><span class="lang-ru">Выполнить договорённое, проверить, что сделано, и закрыть кейс.</span></td><td><span class="lang-en">When completed</span><span class="lang-ru">После выполнения</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>
+      <span class="lang-en">If a case needs more time, tell the patient the new date and the reason. A patient should never go more than 3 working days without an update.</span>
+      <span class="lang-ru">Если кейсу нужно больше времени, сообщи пациенту новую дату и причину. Пациент не должен оставаться без новостей дольше 3 рабочих дней.</span>
+    </p>
+
+    <div class="callout callout-danger">
+      <span class="callout-title"><span class="lang-en">Possible complication – don't wait</span><span class="lang-ru">Возможное осложнение – не ждать</span></span>
+      <div class="lang-en"><p>Severe or increasing pain, growing swelling, a change of skin colour, signs of infection, fever, problems with vision or breathing: don't wait for written confirmation and don't book a regular slot. Tell the treating specialist, or the doctor or nurse on duty, immediately. You never give medical advice, even if the patient insists.</p></div>
+      <div class="lang-ru"><p>Сильная или нарастающая боль, растущий отёк, изменение цвета кожи, признаки инфекции, температура, проблемы со зрением или дыханием: не ждёшь письменного подтверждения и не записываешь на обычный слот. Сразу сообщаешь специалисту, который делал процедуру, или дежурному врачу или медсестре. Медицинских советов не даёшь никогда, даже если пациент настаивает.</p></div>
+    </div>
+
+    <h3><span class="lang-en">Complaints not about a result</span><span class="lang-ru">Жалобы не на результат</span></h3>
+    <p><span class="lang-en">Waiting time, booking, billing, staff behaviour. There is no follow-up consultation. You:</span><span class="lang-ru">Ожидание, запись, оплата, поведение персонала. Консультации-фоллоуапа нет. Ты:</span></p>
+    <ul>
+      <li><span class="lang-en">check the facts: Alteg.io, payments, messages;</span><span class="lang-ru">проверяешь факты: Alteg.io, оплаты, переписку;</span></li>
+      <li><span class="lang-en">ask each staff member involved for a short written explanation, each one separately;</span><span class="lang-ru">просишь каждого причастного сотрудника коротко написать, что произошло, каждого отдельно;</span></li>
+      <li><span class="lang-en">send the case to the Clinic Manager if the patient asks for compensation, or the complaint is about billing or a staff member;</span><span class="lang-ru">отправляешь кейс Clinic Manager, если пациент просит компенсацию или жалоба касается оплаты или сотрудника;</span></li>
+      <li><span class="lang-en">otherwise fix what can be fixed, tell the patient and close the case.</span><span class="lang-ru">в остальных случаях исправляешь, что можно, сообщаешь пациенту и закрываешь кейс.</span></li>
+    </ul>
+
+    <h3><span class="lang-en">If the patient disagrees with the decision</span><span class="lang-ru">Если пациент не согласен с решением</span></h3>
+    <p>
+      <span class="lang-en">Don't argue and don't reopen the discussion. Offer to send the case to the Clinic Manager by email at manager@cosmo-di.com. Her decision is the clinic's final position. The patient also has the right to complain to DHA – never argue with that.</span>
+      <span class="lang-ru">Не спорь и не открывай обсуждение заново. Предложи отправить кейс Clinic Manager на почту manager@cosmo-di.com. Её решение – окончательная позиция клиники. Пациент также вправе пожаловаться в DHA – с этим никогда не спорим.</span>
+    </p>
+
+    <h2><span class="lang-en">What you can and can't offer</span><span class="lang-ru">Что ты можешь и не можешь предложить</span></h2>
+
+    <div class="three-col">
+      <div class="col-ok">
+        <h4><span class="lang-en">You can, without approval</span><span class="lang-ru">Можно без согласования</span></h4>
+        <ul>
+          <li><span class="lang-en">Say you're sorry the patient is unhappy (without admitting fault)</span><span class="lang-ru">Сказать, что тебе жаль, что пациент недоволен (не признавая вины)</span></li>
+          <li><span class="lang-en">Book a complimentary follow-up with the treating specialist</span><span class="lang-ru">Записать на бесплатный фоллоуап к специалисту</span></li>
+          <li><span class="lang-en">Book what is already included in the price (e.g. Botox correction)</span><span class="lang-ru">Записать на то, что уже входит в цену (например, коррекция ботокса)</span></li>
+          <li><span class="lang-en">Reschedule appointments</span><span class="lang-ru">Перенести записи</span></li>
+          <li><span class="lang-en">Resend aftercare the specialist already gave</span><span class="lang-ru">Повторно отправить aftercare, который уже дал специалист</span></li>
+          <li><span class="lang-en">Explain the next steps and timeframes</span><span class="lang-ru">Объяснить следующие шаги и сроки</span></li>
+        </ul>
+      </div>
+      <div class="col-ask">
+        <h4><span class="lang-en">Only with the Clinic Manager</span><span class="lang-ru">Только с Clinic Manager</span></h4>
+        <ul>
+          <li><span class="lang-en">Any free or discounted procedure or correction</span><span class="lang-ru">Любая бесплатная или со скидкой процедура или коррекция</span></li>
+          <li><span class="lang-en">Any free product</span><span class="lang-ru">Любой бесплатный продукт</span></li>
+          <li><span class="lang-en">Any refund, partial refund or credit to the account</span><span class="lang-ru">Любой возврат, частичный возврат или зачисление на счёт</span></li>
+          <li><span class="lang-en">Any exception to prices or rules</span><span class="lang-ru">Любое исключение из цен или правил</span></li>
+        </ul>
+      </div>
+      <div class="col-never">
+        <h4><span class="lang-en">Never</span><span class="lang-ru">Никогда</span></h4>
+        <ul>
+          <li><span class="lang-en">Promise compensation, a result or a deadline that wasn't agreed</span><span class="lang-ru">Обещать компенсацию, результат или срок, которые не согласованы</span></li>
+          <li><span class="lang-en">Assess the result or say what went wrong medically</span><span class="lang-ru">Оценивать результат или говорить, что пошло не так с медицинской точки зрения</span></li>
+          <li><span class="lang-en">Admit fault or blame a colleague</span><span class="lang-ru">Признавать вину или обвинять коллегу</span></li>
+          <li><span class="lang-en">Use your sales discount limits in a complaint</span><span class="lang-ru">Использовать свои лимиты скидок в жалобе</span></li>
+          <li><span class="lang-en">Argue or comment on the patient's behaviour</span><span class="lang-ru">Спорить или комментировать поведение пациента</span></li>
+          <li><span class="lang-en">Discuss the case with or in front of other patients</span><span class="lang-ru">Обсуждать кейс с другими пациентами или при них</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <p>
+      <span class="lang-en">The follow-up consultation is always free. Anything recommended at the follow-up is charged at the standard price, unless the Clinic Manager decides otherwise. If a patient asks for a refund, don't agree and don't refuse: record it and pass it to the Clinic Manager. Public replies to negative online reviews are given only by the Clinic Manager.</span>
+      <span class="lang-ru">Консультация-фоллоуап всегда бесплатная. Всё, что рекомендовали на фоллоуапе, оплачивается по обычной цене, если Clinic Manager не решила иначе. Если пациент просит возврат, не соглашайся и не отказывай: зафиксируй и передай Clinic Manager. Публично на негативные отзывы в интернете отвечает только Clinic Manager.</span>
+    </p>
+
+    <h2><span class="lang-en">Complimentary Service Form – always</span><span class="lang-ru">Complimentary Service Form – всегда</span></h2>
+
+    <div class="callout callout-warning">
+      <div class="lang-en"><p>Every free procedure, correction or product is recorded on the Complimentary Service Form and signed by the patient. In Alteg.io it goes through with a 100% discount. <strong>This applies every time</strong>, not only for complaints: a free extra in a sale, a gift, or something the doctor did free of charge without any complaint. Nothing is given free without the form.</p><p>In a complaint, the free service is approved by the Clinic Manager before you offer it.</p></div>
+      <div class="lang-ru"><p>Каждая бесплатная процедура, коррекция или продукт оформляется формой Complimentary Service Form и подписывается пациентом. В Alteg.io проводится со скидкой 100%. <strong>Это всегда</strong>, не только при жалобах: подарочная процедура при продаже, подарок или что-то, что доктор сделал бесплатно без всякой жалобы. Без формы ничего бесплатно не даётся.</p><p>При жалобе бесплатную услугу сначала одобряет Clinic Manager, и только потом ты её предлагаешь.</p></div>
+      <a class="pill-link" href="https://docs.google.com/document/d/1u9QdH5gqVpjlW0faERgqM78ElzOsRc3I/edit?usp=drive_link&amp;ouid=106162370170536417418&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener"><span class="lang-en">Open the form</span><span class="lang-ru">Открыть форму</span></a>
+    </div>
+
+    <p>
+      <span class="lang-en">After a complaint, set the <strong>Complaint / Sensitive</strong> label in Alteg.io so everyone takes extra care next time. Medical emergencies are on the cases page of the <a href="https://cosmodiclinic.github.io/client-journey/cases.html?role=coordinator" target="_blank" rel="noopener">client journey</a>.</span>
+      <span class="lang-ru">После жалобы поставь лейбл <strong>Complaint / Sensitive</strong> в Alteg.io, чтобы в следующий раз все были особенно внимательны. Экстренные медицинские ситуации – на странице cases в <a href="https://cosmodiclinic.github.io/client-journey/cases.html?role=coordinator" target="_blank" rel="noopener">клиентском флоу</a>.</span>
+    </p>
+
+    <hr>
+
+    <p style="text-align: center; font-style: italic; color: var(--ink-light); margin-top: var(--space-6);">
+      <span class="lang-en">This is the end of the onboarding guide. Welcome to Cosmo Di.</span>
+      <span class="lang-ru">На этом онбординг закончен. Добро пожаловать в Cosmo Di.</span>
+    </p>
+
+  </main>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  injectHeader('12', 'Complaints', 'Жалобы');
+  injectFooterNav(
+    'procedures.html', 'Procedures in plain words', 'Процедуры простыми словами',
+    null, null, null
+  );
+});
+</script>
+
+</body>
+</html>
