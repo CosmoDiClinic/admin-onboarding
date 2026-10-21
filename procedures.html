@@ -10,11 +10,7 @@
 <script src="assets/search.js" defer></script>
 <style>
 .proc-table td:first-child { font-weight:600; color:var(--ink-deep); min-width:150px; }
-.proc-table td:nth-child(3), .proc-table td:nth-child(4) { white-space:nowrap; }
-.tag-yes, .tag-no, .tag-check { display:inline-block; font-family:var(--font-body); font-size:0.66rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.2em 0.6em; border-radius:var(--radius-sm); }
-.tag-yes { background:var(--burgundy); color:var(--cream); }
-.tag-no { background:#e7ede1; color:var(--success); }
-.tag-check { background:#f9efde; color:var(--warning); }
+.proc-table td:nth-child(3) { font-size:0.85rem; color:var(--ink-light); }
 .who { display:block; font-size:0.78rem; color:var(--ink-light); font-weight:400; margin-top:2px; }
 .table-wrap { overflow-x:auto; }
 </style>
@@ -27,159 +23,142 @@
     <span class="hero-eyebrow">11 – <span class="lang-en">Treatments guide</span><span class="lang-ru">Гид по процедурам</span></span>
     <h1><span class="lang-en">Procedures in plain words</span><span class="lang-ru">Процедуры простыми словами</span></h1>
     <p class="hero-lead">
-      <span class="lang-en">What each treatment is for, roughly how long it takes and whether numbing is needed. Written for someone who comes from outside cosmetology, not for a doctor.</span>
-      <span class="lang-ru">Для чего каждая процедура, сколько примерно занимает и нужна ли анестезия. Написано для человека не из косметологии, а не для врача.</span>
+      <span class="lang-en">What each treatment is for and who does it. Written for someone who comes from outside cosmetology, not for a doctor.</span>
+      <span class="lang-ru">Для чего каждая процедура и кто её делает. Написано для человека не из косметологии, а не для врача.</span>
     </p>
   </section>
 
   <main>
 
-    <div class="callout callout-warning">
-      <span class="callout-title"><span class="lang-en">Draft – to be confirmed by Dr. Diana</span><span class="lang-ru">Черновик – на подтверждении у доктора Дианы</span></span>
-      <div class="lang-en"><p>Numbing and timing depend on the doctor's protocol, especially where it says <span class="tag-check"><span class="lang-en">check</span><span class="lang-ru">уточнить</span></span>. The exact slot length is always in Alteg.io. Products and brands are in the catalogue in <a href="02-services.html">Section 2</a>.</p></div>
-      <div class="lang-ru"><p>Анестезия и время зависят от протокола врача, особенно там, где стоит <span class="tag-check"><span class="lang-en">check</span><span class="lang-ru">уточнить</span></span>. Точная длительность слота всегда в Alteg.io. Препараты и бренды – в каталоге в <a href="02-services.html">разделе 2</a>.</p></div>
+    <div class="callout">
+      <p>
+        <span class="lang-en">The exact protocol is always decided by the specialist. Slot length is always in Alteg.io. What you need is to roughly understand what each treatment is for, so you can answer a client and book them correctly (<a href="04-logic.html">Section 4</a>).</span>
+        <span class="lang-ru">Точный протокол всегда определяет специалист. Длительность слота – всегда в Alteg.io. Тебе нужно примерно понимать, для чего каждая процедура, чтобы ответить клиенту и правильно записать (<a href="04-logic.html">раздел 4</a>).</span>
+      </p>
     </div>
 
-    <h2><span class="lang-en">How numbing affects the visit</span><span class="lang-ru">Как анестезия влияет на визит</span></h2>
+    <h2><span class="lang-en">Anaesthesia and preparing the patient</span><span class="lang-ru">Анестезия и подготовка пациента</span></h2>
     <ul>
-      <li><span class="lang-en">If a treatment needs numbing, the <strong>nurse</strong> takes the client to the room first and applies the cream. The doctor comes in once it has worked.</span><span class="lang-ru">Если процедуре нужна анестезия, <strong>медсестра</strong> первой забирает клиента в кабинет и наносит крем. Врач заходит, когда крем подействовал.</span></li>
-      <li><span class="lang-en">The waiting time for the cream is part of the visit. When you tell a client how long they will be with us, include it.</span><span class="lang-ru">Время, пока действует крем, – часть визита. Когда говоришь клиенту, сколько он у нас пробудет, учитывай его.</span></li>
-      <li><span class="lang-en">If the room is still busy with the previous client, the nurse can take the next client through and apply the cream while the room frees up, so the delay costs nothing (see <a href="06-processes.html">Section 6</a>).</span><span class="lang-ru">Если кабинет ещё занят предыдущим клиентом, медсестра может забрать следующего и нанести крем, пока кабинет освобождается, и задержка ничего не стоит (см. <a href="06-processes.html">раздел 6</a>).</span></li>
+      <li><span class="lang-en"><strong>Where anaesthesia is needed, its time is already included in the procedure duration.</strong> You don't book anything extra.</span><span class="lang-ru"><strong>Если анестезия нужна, её время уже включено в длительность процедуры.</strong> Ничего дополнительно не бронируешь.</span></li>
+      <li><span class="lang-en"><strong>The exception is Morpheus8:</strong> anaesthesia is not included – book a separate nurse slot for it before the procedure.</span><span class="lang-ru"><strong>Исключение – Morpheus8:</strong> анестезия не включена, под неё ставишь отдельный слот на медсестру перед процедурой.</span></li>
+      <li><span class="lang-en"><strong>Any injection procedure:</strong> the nurse takes the patient, prepares them (cleanses the face, applies anaesthesia if needed) and assists the doctor.</span><span class="lang-ru"><strong>Любая инъекционная процедура:</strong> медсестра забирает пациента, готовит его (умывает, наносит анестезию, если нужна) и ассистирует врачу.</span></li>
+      <li><span class="lang-en"><strong>Beauty therapist:</strong> prepares her patients herself from start to finish, including numbing cream where needed (for example, before Dermapen).</span><span class="lang-ru"><strong>Эстетист:</strong> готовит своих пациентов сама от начала до конца, включая анестезирующий крем, если он нужен (например, перед Dermapen).</span></li>
     </ul>
 
     <h2><span class="lang-en">Injections</span><span class="lang-ru">Инъекции</span></h2>
-    <p><span class="lang-en">All injections are done by Dr. Diana. The nurse brings the client in and assists.</span><span class="lang-ru">Все инъекции делает доктор Диана. Медсестра забирает клиента и ассистирует.</span></p>
-
     <div class="table-wrap">
     <table class="proc-table">
       <thead><tr>
         <th><span class="lang-en">Treatment</span><span class="lang-ru">Процедура</span></th>
         <th><span class="lang-en">What it's for</span><span class="lang-ru">Для чего</span></th>
-        <th><span class="lang-en">Time</span><span class="lang-ru">Время</span></th>
-        <th><span class="lang-en">Numbing</span><span class="lang-ru">Анестезия</span></th>
+        <th><span class="lang-en">Who</span><span class="lang-ru">Кто</span></th>
       </tr></thead>
       <tbody>
         <tr>
-          <td>Botox<span class="who">Dysport, Nabota</span></td>
-          <td><span class="lang-en">Relaxes muscles so lines from facial expressions soften: forehead, frown lines, crow's feet. Also slims the jaw and reduces sweating.</span><span class="lang-ru">Расслабляет мышцы, и морщины от мимики разглаживаются: лоб, межбровье, гусиные лапки. Также для сужения овала (жевательные мышцы) и от потливости.</span></td>
-          <td><span class="lang-en">15–20 min</span><span class="lang-ru">15–20 мин</span></td>
-          <td><span class="tag-check"><span class="lang-en">check</span><span class="lang-ru">уточнить</span></span></td>
+          <td><span class="lang-en">Botulinum toxin</span><span class="lang-ru">Ботулотоксин</span></td>
+          <td><span class="lang-en">Relaxes muscles so expression lines soften: forehead, between the brows, around the eyes. Also slims the jawline, helps with clenching, neck bands and excessive sweating. Starts working in a few days, full result in about 2 weeks, usually lasts 3–4 months.</span><span class="lang-ru">Расслабляет мышцы, и мимические морщины разглаживаются: лоб, межбровье, вокруг глаз. Также сужает овал, помогает при бруксизме, тяжах на шее и потливости. Начинает действовать через несколько дней, полный результат – примерно через 2 недели, держится обычно 3–4 месяца.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Fillers</span><span class="lang-ru">Филлеры</span><span class="who">Juvederm, Revanesse, Belotero</span></td>
-          <td><span class="lang-en">Add volume and shape: lips, cheeks, jawline, chin. Also fill deeper lines.</span><span class="lang-ru">Добавляют объём и форму: губы, скулы, овал, подбородок. Также заполняют глубокие морщины.</span></td>
-          <td><span class="lang-en">20–30 min (lips) + numbing</span><span class="lang-ru">20–30 мин (губы) + анестезия</span></td>
-          <td><span class="tag-yes"><span class="lang-en">Yes</span><span class="lang-ru">Да</span></span></td>
+          <td><span class="lang-en">Hyaluronic fillers</span><span class="lang-ru">Гиалуроновые филлеры</span></td>
+          <td><span class="lang-en">Add volume and shape: lips, cheekbones, chin, jawline. The result is visible straight away.</span><span class="lang-ru">Добавляют объём и форму: губы, скулы, подбородок, овал. Результат виден сразу.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Skin boosters, biorevitalisation</span><span class="lang-ru">Скинбустеры, биоревитализация</span><span class="who">Profhilo, Jalupro, NCTF, PDRN, Plinest</span></td>
-          <td><span class="lang-en">Skin quality: hydration, glow, fine lines, elasticity. Usually done as a course.</span><span class="lang-ru">Качество кожи: увлажнение, сияние, мелкие морщины, упругость. Обычно курсом.</span></td>
-          <td><span class="lang-en">Alteg.io + numbing</span><span class="lang-ru">Alteg.io + анестезия</span></td>
-          <td><span class="tag-yes"><span class="lang-en">Yes</span><span class="lang-ru">Да</span></span></td>
+          <td><span class="lang-en">Filler dissolving</span><span class="lang-ru">Растворение филлера</span></td>
+          <td><span class="lang-en">Removes overfilled, migrated or lumpy hyaluronic filler. New filler usually no earlier than about 2 weeks later – the doctor decides.</span><span class="lang-ru">Убирает лишний, сместившийся или неровный гиалуроновый филлер. Новый филлер обычно не раньше чем примерно через 2 недели – решает врач.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Collagen stimulators</span><span class="lang-ru">Коллагеностимуляторы</span><span class="who">AesthetFill, Nithya, Juvelook</span></td>
-          <td><span class="lang-en">The skin builds its own collagen: firmness and volume appear gradually. Several sessions 4–6 weeks apart.</span><span class="lang-ru">Кожа вырабатывает собственный коллаген: упругость и объём появляются постепенно. Несколько сеансов с интервалом 4–6 недель.</span></td>
-          <td>Alteg.io</td>
-          <td><span class="tag-check"><span class="lang-en">check</span><span class="lang-ru">уточнить</span></span></td>
+          <td><span class="lang-en">Skin boosters, biorevitalization</span><span class="lang-ru">Скинбустеры, биоревитализация</span></td>
+          <td><span class="lang-en">Skin quality: hydration, glow, fine lines, elasticity, the area under the eyes. Usually a course; the effect builds gradually.</span><span class="lang-ru">Качество кожи: увлажнение, сияние, мелкие морщины, упругость, зона под глазами. Обычно курсом, эффект нарастает постепенно.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Filler dissolving / New Lips</span><span class="lang-ru">Растворение филлера / New Lips</span></td>
-          <td><span class="lang-en">Removes old, migrated or lumpy filler. New filler only 24–72 hours later, when the doctor decides.</span><span class="lang-ru">Убирает старый, мигрировавший или неровный филлер. Новый филлер – только через 24–72 часа, по решению врача.</span></td>
-          <td>Alteg.io</td>
-          <td><span class="tag-check"><span class="lang-en">check</span><span class="lang-ru">уточнить</span></span></td>
+          <td><span class="lang-en">Collagen stimulators</span><span class="lang-ru">Стимуляторы коллагена</span></td>
+          <td><span class="lang-en">The skin builds its own collagen: firmness and gentle volume appear over a few months. Usually 2–3 sessions several weeks apart.</span><span class="lang-ru">Кожа вырабатывает собственный коллаген: упругость и мягкий объём появляются в течение нескольких месяцев. Обычно 2–3 процедуры с интервалом в несколько недель.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Lipolytics</span><span class="lang-ru">Липолитики</span><span class="who">Cellboost, Triada, PB Serum</span></td>
-          <td><span class="lang-en">Reduce small areas of local fat, for example a double chin. 2–4 sessions.</span><span class="lang-ru">Уменьшают небольшие локальные жировые отложения, например второй подбородок. 2–4 сеанса.</span></td>
-          <td>Alteg.io</td>
-          <td><span class="tag-check"><span class="lang-en">check</span><span class="lang-ru">уточнить</span></span></td>
+          <td><span class="lang-en">Lipolytic injections</span><span class="lang-ru">Липолитики</span></td>
+          <td><span class="lang-en">Reduce small areas of local fat, for example a double chin or the abdomen. Not for weight loss. A course of sessions.</span><span class="lang-ru">Уменьшают небольшие локальные жировые отложения, например второй подбородок или живот. Не для похудения. Курс процедур.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Hair treatments</span><span class="lang-ru">Процедуры для волос</span><span class="who">Dr. CYJ, Cellbooster Hair, ASCE+</span></td>
-          <td><span class="lang-en">Injections into the scalp for hair loss and thinning. 2–4 sessions.</span><span class="lang-ru">Инъекции в кожу головы при выпадении и истончении волос. 2–4 сеанса.</span></td>
-          <td>Alteg.io</td>
-          <td><span class="tag-check"><span class="lang-en">check</span><span class="lang-ru">уточнить</span></span></td>
+          <td><span class="lang-en">Hair injections</span><span class="lang-ru">Инъекции для волос</span></td>
+          <td><span class="lang-en">Injections into the scalp for hair loss and thinning. Done as a course.</span><span class="lang-ru">Инъекции в кожу головы при выпадении и поредении волос. Курсом.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
       </tbody>
     </table>
     </div>
 
-    <h2><span class="lang-en">Devices</span><span class="lang-ru">Аппаратные процедуры</span></h2>
-
+    <h2><span class="lang-en">Devices</span><span class="lang-ru">Аппараты</span></h2>
     <div class="table-wrap">
     <table class="proc-table">
       <thead><tr>
         <th><span class="lang-en">Treatment</span><span class="lang-ru">Процедура</span></th>
         <th><span class="lang-en">What it's for</span><span class="lang-ru">Для чего</span></th>
-        <th><span class="lang-en">Time</span><span class="lang-ru">Время</span></th>
-        <th><span class="lang-en">Numbing</span><span class="lang-ru">Анестезия</span></th>
+        <th><span class="lang-en">Who</span><span class="lang-ru">Кто</span></th>
       </tr></thead>
       <tbody>
         <tr>
-          <td>Morpheus8<span class="who"><span class="lang-en">Dr. Diana only</span><span class="lang-ru">Только доктор Диана</span></span></td>
-          <td><span class="lang-en">Microneedling with radiofrequency: tightens skin, improves texture, scars and pores. Face and body. 1–3 sessions 4–6 weeks apart.</span><span class="lang-ru">Микроиглы с радиочастотой: подтягивает кожу, улучшает текстуру, рубцы и поры. Лицо и тело. 1–3 сеанса с интервалом 4–6 недель.</span></td>
-          <td><span class="lang-en">30–60 min + numbing</span><span class="lang-ru">30–60 мин + анестезия</span></td>
-          <td><span class="tag-yes"><span class="lang-en">Yes</span><span class="lang-ru">Да</span></span></td>
+          <td><span class="lang-en">Morpheus8</span><span class="lang-ru">Morpheus8</span></td>
+          <td><span class="lang-en">Microneedling with radiofrequency heat: tightens skin, improves texture, pores, acne scars and stretch marks. Face and body. Redness and swelling for a few days; the result builds over months.</span><span class="lang-ru">Микроиглы с радиочастотным нагревом: подтягивает кожу, улучшает текстуру, поры, рубцы постакне и стрии. Лицо и тело. Покраснение и отёк – несколько дней, результат нарастает месяцами.</span></td>
+          <td><span class="lang-en">Dr. Diana only</span><span class="lang-ru">Только доктор Диана</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Dermapen microneedling</span><span class="lang-ru">Микронидлинг Dermapen</span><span class="who"><span class="lang-en">Aesthetician</span><span class="lang-ru">Эстетист</span></span></td>
-          <td><span class="lang-en">Tiny needles trigger the skin's own repair: texture, acne scars, stretch marks, hydration. Can be combined with exosomes.</span><span class="lang-ru">Микроиглы запускают собственное восстановление кожи: текстура, постакне, растяжки, увлажнение. Можно сочетать с экзосомами.</span></td>
-          <td><span class="lang-en">Alteg.io + numbing</span><span class="lang-ru">Alteg.io + анестезия</span></td>
-          <td><span class="tag-yes"><span class="lang-en">Yes</span><span class="lang-ru">Да</span></span></td>
+          <td><span class="lang-en">Microneedling (Dermapen)</span><span class="lang-ru">Микронидлинг (Dermapen)</span></td>
+          <td><span class="lang-en">Tiny punctures trigger the skin's own repair: texture, pores, acne scars, stretch marks, glow. Can be combined with serums or exosomes. Red for a few days; usually a course.</span><span class="lang-ru">Микропроколы запускают собственное восстановление кожи: текстура, поры, рубцы постакне, стрии, сияние. Можно сочетать с сыворотками или экзосомами. Несколько дней кожа красная, обычно курсом.</span></td>
+          <td><span class="lang-en">Beauty therapist</span><span class="lang-ru">Эстетист</span></td>
         </tr>
         <tr>
-          <td>Lumecca IPL<span class="who"><span class="lang-en">Aesthetician, Dr. Diana for VIP</span><span class="lang-ru">Эстетист, для VIP – доктор Диана</span></span></td>
-          <td><span class="lang-en">Light pulses for pigment spots, sun damage, freckles, redness and small vessels. Feels like a rubber band snap.</span><span class="lang-ru">Световые вспышки от пигментных пятен, фотостарения, веснушек, покраснений и сосудиков. Ощущение – как щелчок резинкой.</span></td>
-          <td><span class="lang-en">15–30 min</span><span class="lang-ru">15–30 мин</span></td>
-          <td><span class="tag-no"><span class="lang-en">No</span><span class="lang-ru">Нет</span></span></td>
+          <td><span class="lang-en">Lumecca IPL</span><span class="lang-ru">Lumecca IPL</span></td>
+          <td><span class="lang-en">Light pulses for sun spots, freckles, redness and small vessels. Spots darken first, then flake off. Not for tanned or darker skin and not for melasma. Usually a course.</span><span class="lang-ru">Световые вспышки от солнечных пятен, веснушек, покраснений и сосудиков. Пятна сначала темнеют, потом шелушатся и сходят. Не для загорелой и смуглой кожи и не при мелазме. Обычно курсом.</span></td>
+          <td><span class="lang-en">Beauty therapist (Dr. Diana for VIP)</span><span class="lang-ru">Эстетист (для VIP – доктор Диана)</span></td>
         </tr>
         <tr>
-          <td>Wonder Axon<span class="who"><span class="lang-en">Aesthetician</span><span class="lang-ru">Эстетист</span></span></td>
-          <td><span class="lang-en">Body: muscle tone, contouring, tighter skin. A course of 4–8 sessions, 2–3 a week.</span><span class="lang-ru">Тело: тонус мышц, моделирование, подтянутая кожа. Курс 4–8 сеансов, 2–3 раза в неделю.</span></td>
-          <td><span class="lang-en">25–30 min</span><span class="lang-ru">25–30 мин</span></td>
-          <td><span class="tag-no"><span class="lang-en">No</span><span class="lang-ru">Нет</span></span></td>
+          <td><span class="lang-en">Wonder Axon</span><span class="lang-ru">Wonder Axon</span></td>
+          <td><span class="lang-en">Body: makes the muscles contract intensively – muscle tone and contour. About 25 minutes a session; single sessions and packages.</span><span class="lang-ru">Тело: заставляет мышцы интенсивно сокращаться – тонус и контур. Около 25 минут за сеанс; разово и пакетами.</span></td>
+          <td><span class="lang-en">Beauty therapist</span><span class="lang-ru">Эстетист</span></td>
         </tr>
         <tr>
-          <td>VISIA</td>
-          <td><span class="lang-en">A photo analysis of the skin: wrinkles, pigment, pores, redness. The doctor uses it to build a plan.</span><span class="lang-ru">Фотоанализ кожи: морщины, пигментация, поры, покраснения. Врач строит по нему план.</span></td>
-          <td><span class="lang-en">10–20 min</span><span class="lang-ru">10–20 мин</span></td>
-          <td><span class="tag-no"><span class="lang-en">No</span><span class="lang-ru">Нет</span></span></td>
+          <td><span class="lang-en">VISIA</span><span class="lang-ru">VISIA</span></td>
+          <td><span class="lang-en">A camera analysis of the skin: pigment, redness, wrinkles, pores, sun damage. The doctor builds the plan on it. Booked as a consultation.</span><span class="lang-ru">Анализ кожи камерой: пигментация, покраснения, морщины, поры, повреждения от солнца. Врач строит по нему план. Записывается как консультация.</span></td>
+          <td><span class="lang-en">Dr. Diana</span><span class="lang-ru">Доктор Диана</span></td>
         </tr>
       </tbody>
     </table>
     </div>
 
-    <h2><span class="lang-en">Facials and peels</span><span class="lang-ru">Уходы и пилинги</span></h2>
-    <p><span class="lang-en">Done by the aesthetician. None of these need numbing and the client can usually go straight back to normal life.</span><span class="lang-ru">Делает эстетист. Анестезия не нужна, обычно клиент сразу возвращается к обычной жизни.</span></p>
-
+    <h2><span class="lang-en">Facials, cleansing and peels</span><span class="lang-ru">Уходы, чистки и пилинги</span></h2>
     <div class="table-wrap">
     <table class="proc-table">
       <thead><tr>
         <th><span class="lang-en">Treatment</span><span class="lang-ru">Процедура</span></th>
         <th><span class="lang-en">What it's for</span><span class="lang-ru">Для чего</span></th>
-        <th><span class="lang-en">Time</span><span class="lang-ru">Время</span></th>
+        <th><span class="lang-en">Who</span><span class="lang-ru">Кто</span></th>
       </tr></thead>
       <tbody>
         <tr>
-          <td>HydraFacial</td>
-          <td><span class="lang-en">Cleansing, gentle exfoliation and hydration in one treatment. Instant glow, a good choice before an event.</span><span class="lang-ru">Очищение, мягкое отшелушивание и увлажнение за одну процедуру. Сразу сияние, хороший вариант перед мероприятием.</span></td>
-          <td>Alteg.io</td>
+          <td><span class="lang-en">HydraFacial</span><span class="lang-ru">HydraFacial</span></td>
+          <td><span class="lang-en">Cleansing, exfoliation, painless vacuum extraction and a serum for the skin's needs. Instant glow, no downtime – a good choice before an event.</span><span class="lang-ru">Очищение, отшелушивание, безболезненная вакуумная чистка и сыворотка под задачу кожи. Сразу сияние, без восстановления – хороший вариант перед событием.</span></td>
+          <td><span class="lang-en">Beauty therapist</span><span class="lang-ru">Эстетист</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Deep cleansing, acne facial</span><span class="lang-ru">Глубокое очищение, уход при акне</span></td>
-          <td><span class="lang-en">Clears pores and congestion. For oily and acne-prone skin, including clients on acne treatment.</span><span class="lang-ru">Очищает поры и закупорки. Для жирной и склонной к акне кожи, в том числе для клиентов на лечении акне.</span></td>
-          <td>Alteg.io</td>
+          <td><span class="lang-en">Cleansing</span><span class="lang-ru">Чистки</span></td>
+          <td><span class="lang-en">Deep facial cleansing, gentle cleansing for acne-prone skin and clients on acne treatment, back cleansing.</span><span class="lang-ru">Глубокая чистка лица, деликатная чистка для проблемной кожи и клиентов на лечении акне, чистка спины.</span></td>
+          <td><span class="lang-en">Beauty therapist</span><span class="lang-ru">Эстетист</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Peels</span><span class="lang-ru">Пилинги</span><span class="who">BioRePeel, PRX-T33, Sensi Peel, PH Formula, Sama Peel</span></td>
-          <td><span class="lang-en">Renew the top layer of skin: pigmentation, acne, redness, dull skin. BioRePeel and PRX-T33 are done without visible peeling.</span><span class="lang-ru">Обновляют верхний слой кожи: пигментация, акне, покраснения, тусклость. BioRePeel и PRX-T33 – без видимого шелушения.</span></td>
-          <td>Alteg.io</td>
+          <td><span class="lang-en">Peels</span><span class="lang-ru">Пилинги</span></td>
+          <td><span class="lang-en">Renew the top layer of skin. Different peels for pigmentation, redness, acne-prone skin, ageing skin and the body. Some give almost no visible peeling, others flake for a few days. Sun protection is a must.</span><span class="lang-ru">Обновляют верхний слой кожи. Разные пилинги для пигментации, покраснений, проблемной кожи, возрастной кожи и тела. Одни почти не дают видимого шелушения, после других кожа шелушится несколько дней. Защита от солнца обязательна.</span></td>
+          <td><span class="lang-en">Beauty therapist</span><span class="lang-ru">Эстетист</span></td>
         </tr>
         <tr>
-          <td><span class="lang-en">Hydrating and express facials</span><span class="lang-ru">Увлажняющие и экспресс-уходы</span><span class="who">HydroPeptide, Lift &amp; Glow, DMK</span></td>
-          <td><span class="lang-en">Hydration, lifting effect, glow. Lift &amp; Glow Express takes 30 minutes in total.</span><span class="lang-ru">Увлажнение, лифтинг-эффект, сияние. Lift &amp; Glow Express занимает всего 30 минут.</span></td>
-          <td><span class="lang-en">Alteg.io (Lift &amp; Glow 30 min)</span><span class="lang-ru">Alteg.io (Lift &amp; Glow 30 мин)</span></td>
+          <td><span class="lang-en">Enzyme therapy and other facials</span><span class="lang-ru">Энзимная терапия и другие уходы</span></td>
+          <td><span class="lang-en">Professional facials for the skin's needs: renewal, hydration, calming, tone.</span><span class="lang-ru">Профессиональные уходы под задачу кожи: обновление, увлажнение, успокоение, тон.</span></td>
+          <td><span class="lang-en">Beauty therapist</span><span class="lang-ru">Эстетист</span></td>
         </tr>
       </tbody>
     </table>
@@ -189,11 +168,11 @@
     <div class="kv-list">
       <div class="kv-row">
         <div class="kv-key"><span class="lang-en">Consultations</span><span class="lang-ru">Консультации</span></div>
-        <div class="kv-val"><span class="lang-en">Homecare, Acne, VISIA and Procedure consultations, 30 minutes each. No numbing.</span><span class="lang-ru">Homecare, Acne, VISIA и Procedure consultation, по 30 минут. Без анестезии.</span></div>
+        <div class="kv-val"><span class="lang-en">Procedure, acne and home care consultations, VISIA skin analysis – with Dr. Diana. How they are charged: <a href="04-logic.html">Section 4</a>.</span><span class="lang-ru">Консультации по процедурам, по акне, по домашнему уходу, анализ кожи на VISIA – у доктора Дианы. Как оплачиваются: <a href="04-logic.html">раздел 4</a>.</span></div>
       </div>
       <div class="kv-row">
-        <div class="kv-key"><span class="lang-en">IV drips</span><span class="lang-ru">Капельницы</span></div>
-        <div class="kv-val"><span class="lang-en">The list and descriptions will be added.</span><span class="lang-ru">Список и описания будут добавлены.</span></div>
+        <div class="kv-key"><span class="lang-en">IV drips and lab tests</span><span class="lang-ru">Капельницы и анализы</span></div>
+        <div class="kv-val"><span class="lang-en">We have them. The current list is in Alteg.io.</span><span class="lang-ru">Они есть. Актуальный список – в Alteg.io.</span></div>
       </div>
     </div>
 
